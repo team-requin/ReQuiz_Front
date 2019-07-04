@@ -96,7 +96,7 @@
     margin: 0 auto;
     border-radius: 10px;
     /* background: linear-gradient(to bottom, purple , white 25%, red , black ); */
-    background: #f6aebab3;
+    background: #f6aeba;
 }
 #login_title {
     padding-top: 30px;
@@ -154,7 +154,7 @@
     height: 480px;
     margin: 0 auto;
     border-radius: 10px;
-    background: #f6aebab3;
+    background: #f6aeba;
 }
 #signup_title {
     padding-top: 30px;
