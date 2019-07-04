@@ -1,8 +1,8 @@
 <div id="footer_frame">
     <footer id="footer">
-        <img src="img/title_logo.png" alt="footer_logo">
+        <img src="/img/title_logo.png" alt="footer_logo">
         <div id="info_indus">
-            <span><a href="#">Team Lequin 소개</a></span>
+            <span><a href="#">Team Requin 소개</a></span>
             <span><a href="#">이용약관</a></span>
             <span><a href="#">개인정보처리방침</a></span>
             <span><a href="#">공지사항</a></span>
