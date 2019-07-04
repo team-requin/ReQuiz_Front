@@ -302,9 +302,30 @@
 
 /*!quiz_write*/
 
-
-
-
+#quiz_write_frame {
+    height: 80vh;
+    border: 1px solid red;
+}
+#quiz_write {
+    width: 1000px;
+    margin: 20px auto;
+    border: 1px solid red;
+}
+#quiz_num {
+    border: 1px solid red;
+}
+#quiz_num > p {
+    border: 1px solid red;
+}
+#quiz_problem {
+    border: 1px solid red;
+}
+#quiz_question {
+    border: 1px solid red;
+}
+#quiz_answer {
+    border: 1px solid red;
+}
 
 
 
