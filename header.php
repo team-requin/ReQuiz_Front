@@ -4,7 +4,8 @@
     <title>Requiz</title>
 	<link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-    <script src="/js/main.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
     <div id="header">

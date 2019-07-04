@@ -15,9 +15,9 @@ include("header.php");
     <div id="login">
         <form>
             <p id="login_title">LOGIN</p>
-            <input type="text" placeholder="ID" class="login_input">
-            <input type="password" placeholder="Password" class="login_input">
-            <button>login</button>
+            <input type="text" id="login_id" placeholder="ID" class="login_input">
+            <input type="password" id="login_pw" placeholder="Password" class="login_input">
+            <button onclick="login()">login</button>
             <p id="login_register"><a href="#" onclick="show_signup()">회원가입</a></p>
         </form>
     </div>
