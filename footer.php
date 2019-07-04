@@ -1,4 +1,4 @@
-<div>
+<div id="footer_frame">
     <footer id="footer">
         <img src="/img/title_logo.png" alt="footer_logo">
         <div id="info_indus">
