@@ -1,18 +1,133 @@
 * {
     padding: 0;
     margin: 0;
-    border: 2px solid red;
 }
-* > * {
-    border: 1px solid blue;
-}
+
+/*!header*/
 #header {
-    display: inline;
+    height: 100px;
+    line-height: 100px;
+    background-color: #ce6bce;
 }
-#header header {
-    display: flex;
+#header header .header_logo {
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#header header .header_logo > a {
+    height: auto;
+}
+#header header .header_logo > a > img {
+    height: 80px;
+    padding: 10px;
+    border-radius: 10px;
 }
 #header header .header_btns {
-    border: 4px solid black;
     float: right;
+    margin-right: 20px;
 }
+#header header .header_btns .btn {
+    height: 45px;
+    width: 85px;
+    border-radius: 15px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(52, 121, 211);
+    color: #ffffff;
+    margin-right: 5px;
+    transition: 0.5s;
+}
+#header header .header_btns .btn:hover {
+    height: 55px;
+    width: 95px;
+}
+
+#container {
+    height: 80vh;
+}
+
+/*!footer*/
+
+#footer {
+    height: 130px;
+    padding-top: 20px;
+    background-color: #37d6eb;
+    text-align: center;
+}
+#footer > img {
+    height: 50px;
+}
+#info_indus > span {
+    font-size: 10px;
+}
+#info_cap > span {
+    font-size: 13px;
+    color: white;
+}
+#footer > div > span > a {
+    text-decoration: none;
+    color: white;
+}
+
+/*!login*/
+
+#login {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#login > div {
+    width: 350px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #d14646;
+}
+#login_title {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+#login > div > input {
+    display: flex;
+    margin: 30px auto;
+    width: 85%;
+    height: 40px;
+}
+.login_input {
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 15px;
+    border: 0;
+}
+#login > div > button {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+}
+#login_register {
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+}
+#login_register > a {
+    color: #0ddf5d;
+}
+#login_frame {
+    height: 100vh;
+    z-index: -1;
+    background-color: #80808071;
+}
+/* #login, #login_frame {
+    display: none;
+} */
