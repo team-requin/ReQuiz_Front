@@ -1,6 +1,7 @@
 ﻿function show_login() {
     document.getElementById("login_frame").style.display = "block";
     document.getElementById("login_shadow").style.display = "block";
+	document.getElementById('login_id').focus();
 }
 function hide_login() {
     document.getElementById("login_frame").style.display = "none";
@@ -10,6 +11,7 @@ function show_signup() {
     document.getElementById("login_frame").style.display = "none";
     document.getElementById("signup_frame").style.display = "block";
     document.getElementById("login_shadow").style.display = "block";
+	document.getElementById('signup_name').focus();
 }
 function hide_signup() {
     document.getElementById("signup_frame").style.display = "none";
@@ -21,11 +23,15 @@ function login() {
 	
 	var userdata = {
         "id": id.value,
-        "pw": pw.value
+        "pw": md5(pw.value)
     };
     axios.post("http://10.156.147.139/auth/login", userdata).then((user) => {
-        // console.log(user.data.access_token);
-        console.log(user.data.access_token);
+		localStorage.token = user.data.access_token;
+		hide_login();
+		alert('로그인 되었습니다');
+		setTimeout(() => {
+			alert('로그아웃!');
+		}, 10000);
     }).catch(() => {
         alert('계정이 일치하지 않습니다.');
         id.value = "";
@@ -61,5 +67,28 @@ function signup_check_id() {
 		alert('아이디가 중복됩니다');
 		id.value = '';
 		id.focus();
+	});
+}
+function signup() {
+	var name = document.getElementById('signup_name');
+	var id = document.getElementById('signup_id');
+	var pw = document.getElementById('signup_pw');
+	var pw_check = document.getElementById('signup_pw_check');
+	
+	var data = {
+		'name': name.value,
+		'id': id.value,
+		'pw': md5(pw.value),
+		'pw_check': md5(pw_check.value)
+	};
+	
+	axios.post('http://10.156.147.139/auth/register', data).then(() => {
+		alert('회원가입이 완료되었습니다');
+		hide_signup();
+		show_login();
+	}).catch(() => {
+		alert('비밀번호가 일치하지 않습니다');
+		pw_check.value = '';
+		pw_check.focus();
 	});
 }
