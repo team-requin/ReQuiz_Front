@@ -14,7 +14,7 @@
                 <button id="btn2" class="btn">로그아웃</button>
             </div>
             <div class="header_logo">
-                <a href="#"><img src="/img/title_logo.png" alt="LOGO_img"></a>
+                <a href="#"><img src="/img/color_requin.png" alt="LOGO_img"></a>
             </div>
         </header>
     </div>
