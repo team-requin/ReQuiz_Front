@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Requiz</title>
+	<link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/main.js"></script>
 </head>

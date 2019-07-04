@@ -1,8 +1,6 @@
 <?php
 include("header.php");
 ?>
-<link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
-
 <div id="main">
     <div>
         <p id="title">REQUIZ</p>
