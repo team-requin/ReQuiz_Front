@@ -5,8 +5,8 @@ include("header.php");
     <div>
         <p id="title">REQUIZ</p>
         <div>
-            <input placeholder="plz write a id" type="text" id="user_id"/>
-            <button type="button" id="search">search</button>
+            <input placeholder="Please enter the ID to search" type="text" id="user_id"/>
+            <button type="button" id="user_search">Search</button>
         </div>
     </div>
 </div>
