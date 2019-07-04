@@ -5,8 +5,8 @@
     <link rel="shortcut icon" href="/img/color_requin.png">
     <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<script type="text/javascript" src="/js/ajax.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
@@ -42,11 +42,11 @@
                 </div>
                 <div>
                     <input type="text" id="signup_id" autocomplete="off" placeholder="ID" class="signup_input">
-                    <button class="overlap_check" onclick="signup_check_name()">Check</button>
+                    <button class="overlap_check" onclick="signup_check_id()">Check</button>
                 </div>
                 <input type="password" id="signup_pw" autocomplete="off" placeholder="Password" class="signup_input">
                 <input type="password" id="signup_pw_check" autocomplete="off" placeholder="Confirm Password" class="signup_input">
-                <button class="signup_btn">Signup</button>
+                <button class="signup_btn" onclick="signup()">Signup</button>
             </form>
         </div>
     </div>
