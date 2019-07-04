@@ -2,7 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Requiz</title>
-	<link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/color_requin.png">
+    <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
@@ -34,12 +35,16 @@
         <div id="signup">
             <form>
                 <p id="signup_title">Signup</p>
-                <input type="text" placeholder="Nickname" class="signup_input">
-                <button class="overlap_check">중복 체크</button>
-                <input type="text" placeholder="ID" class="signup_input">
-                <button class="overlap_check">중복 체크</button>
-                <input type="password" placeholder="Password" class="signup_input">
-                <input type="password" placeholder="Confirm Password" class="signup_input">
+                <div>
+                    <input type="text" autocomplete="off" placeholder="Nickname" class="signup_input">
+                    <button class="overlap_check">Check</button>
+                </div>
+                <div>
+                    <input type="text" autocomplete="off" placeholder="ID" class="signup_input">
+                    <button class="overlap_check">Check</button>
+                </div>
+                <input type="password" autocomplete="off" placeholder="Password" class="signup_input">
+                <input type="password" autocomplete="off" placeholder="Confirm Password" class="signup_input">
                 <button class="signup_btn">Signup</button>
             </form>
         </div>
