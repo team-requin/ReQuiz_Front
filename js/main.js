@@ -33,21 +33,6 @@ function login() {
 		id.focus();
     });
 }
-function signup_check_id() {
-	var id = document.getElementById('signup_id');
-	
-	var data = {
-		'id': id.value
-	};
-	
-	axios.post('http://10.156.147.139/auth/sameaccount', data).then(() => {
-		return;
-	}).catch(() => {
-		alert('아이디가 중복됩니다');
-		id.value = '';
-		id.focus();
-	});
-}
 function signup_check_name() {
 	var name = document.getElementById('signup_name');
 	
@@ -56,10 +41,25 @@ function signup_check_name() {
 	};
 	
 	axios.post('http://10.156.147.139/auth/samename', data).then(() => {
-		return;
+		alert('사용 가능한 닉네임입니다');
 	}).catch(() => {
 		alert('닉네임이 중복됩니다');
 		name.value = '';
 		name.focus();
+	});
+}
+function signup_check_id() {
+	var id = document.getElementById('signup_id');
+	
+	var data = {
+		'id': id.value
+	};
+	
+	axios.post('http://10.156.147.139/auth/sameaccount', data).then(() => {
+		alert('사용 가능한 아이디입니다');
+	}).catch(() => {
+		alert('아이디가 중복됩니다');
+		id.value = '';
+		id.focus();
 	});
 }
