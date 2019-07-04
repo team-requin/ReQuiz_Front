@@ -45,13 +45,25 @@
 }
 
 #container {
-    height: 80vh;
+    height: 50vh;
 }
 
 /*!main*/
 
 #main {
     height: 100vh;
+    padding-top: 100px;
+}
+#main > div {
+    text-align: center;
+    height: 20vh;
+    margin: 0 auto;
+    width: 500px;
+}
+#title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 
@@ -68,7 +80,7 @@
     top: 50vh;
     left: 50vw;
     transform: translate(-50%,-50%);
-    background-color: #00ffaa8e;
+    background-color: #efced736;
 }
 #login {
     position: fixed;
@@ -83,7 +95,8 @@
     height: 400px;
     margin: 0 auto;
     border-radius: 10px;
-    background-color: #d14646;
+    /* background: linear-gradient(to bottom, purple , white 25%, red , black ); */
+    background: #f6aebab3;
 }
 #login_title {
     padding-top: 30px;
@@ -120,8 +133,58 @@
     text-align: center;
 }
 #login_register > a {
-    color: #0ddf5d;
+    color: #df0d8f;
 }
+
+/*!signup*/
+
+#signup_frame {
+    display: none;
+}
+#signup {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 11;
+    border-radius: 10px;
+}
+#signup > div {
+    width: 350px;
+    height: 480px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background: #f6aebab3;
+}
+#signup_title {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+#signup > div > input {
+    display: flex;
+    margin: 30px auto;
+    width: 85%;
+    height: 40px;
+}
+.signup_input {
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 15px;
+    border: 0;
+}
+#signup > div > button {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 40px;
+    border: 0;
+    border-radius: 10px;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+}
+
 
 
 /*!quiz_list*/
