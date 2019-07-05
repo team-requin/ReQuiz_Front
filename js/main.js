@@ -1,4 +1,17 @@
-﻿function show_login() {
+﻿let token = sessionStorage.getItem('token');
+let data = {};
+let config = {
+  headers: {
+    'Authorization': 'Bearer '+token,
+  }
+};
+axios.post('http://10.156.147.139/auth/token_access', data, config).then(() => {
+	document.getElementById('btn1').remove();
+}).catch(() => {
+	document.getElementById('btn2').remove();
+});
+console.clear();
+function show_login() {
     document.getElementById("login_frame").style.display = "block";
     document.getElementById("login_shadow").style.display = "block";
 	document.getElementById('login_id').focus();
@@ -29,12 +42,20 @@ function login() {
 		alert('로그인 되었습니다');
 		sessionStorage.setItem("token", user.data.access_token);
 		hide_login();
+		document.getElementById('btn1').remove();
     }).catch(() => {
         alert('계정이 일치하지 않습니다.');
         id.value = "";
         pw.value = "";
 		id.focus();
     });
+}
+function logout() {
+	var check = confirm('정말 로그아웃 하시겠습니까?');
+	if(check) {
+		sessionStorage.clear();
+		location.reload();
+	}
 }
 function signup_check_name() {
 	var name = document.getElementById('signup_name');

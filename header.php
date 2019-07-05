@@ -13,11 +13,11 @@
     <div id="header">
         <header>
             <div class="header_btns">
-                <button id="btn1" class="btn" onclick="show_login()">로그인</button>
-                <button id="btn2" class="btn">로그아웃</button>
+                <button id="btn_login" class="btn" onclick="show_login()">로그인</button>
+                <button id="btn_logout" class="btn" onclick="logout()">로그아웃</button>
             </div>
             <div class="header_logo">
-                <a href="#"><img src="/img/title_logo.png" alt="LOGO_img"></a>
+                <a href="#"><img src="/img/requin.png" alt="LOGO_img"></a>
             </div>
         </header>
     </div>
