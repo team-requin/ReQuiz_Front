@@ -17,6 +17,10 @@ button:hover {
     line-height: 100px;
     background-color: #40564e;
 }
+#header header {
+    height: 100px;
+    line-height: 100px;
+}
 #header header .header_logo {
     height: 100px;
     position: absolute;
@@ -32,11 +36,13 @@ button:hover {
     border-radius: 10px;
 }
 #header header .header_btns {
+    height: 100px;
     float: right;
     margin-right: 20px;
 }
 #header header .header_btns .btn {
     height: 45px;
+    line-height: 45px;
     width: 85px;
     border-radius: 15px;
     border: 0;
@@ -59,7 +65,7 @@ button:hover {
 /*!main*/
 
 #main {
-    height: 50vh;
+    height: 75vh;
     padding-top: 100px;
     background-color: #6fa893;
 }
@@ -98,6 +104,8 @@ button:hover {
     cursor: pointer;
     width: 400px;
     height: 40px;
+    color: #ffffff;
+    background-color: #40564e;
 }
 
 /*!login*/
@@ -129,7 +137,7 @@ button:hover {
     margin: 0 auto;
     border-radius: 10px;
     /* background: linear-gradient(to bottom, purple , white 25%, red , black ); */
-    background: #f6aeba;
+    background: #7a978d;
 }
 #login_title {
     padding-top: 30px;
@@ -188,7 +196,7 @@ button:hover {
     height: 480px;
     margin: 0 auto;
     border-radius: 10px;
-    background: #f6aeba;
+    background: #7a978d;
 }
 #signup_title {
     color: #ffffff;
@@ -239,9 +247,10 @@ button:hover {
 /*!quiz_list*/
 
 #quiz_list_frame {
-    min-height: 80vh;
+    min-height: 100vh;
     position: relative;
     display: flex;
+    background-color: #6fa893;
 }
 #quiz_profile {
     width: 30%;
@@ -256,7 +265,7 @@ button:hover {
     line-height: 40px;
     padding: 0 10px;
     outline: none;
-    border: 1px solid #ffa7b6;
+    border: 1px solid #b1ffa7;
 }
 #quiz_profile_input > button {
     width: 220px;
@@ -278,7 +287,7 @@ button:hover {
 }
 #quiz_list > div > div {
     width: 70%;
-    border: 1px solid #ffa7b6;
+    border: 1px solid #b1ffa7;
     margin-top: 15px;
     padding-left: 10px;
     height: 70px;
@@ -292,7 +301,7 @@ button:hover {
     cursor: pointer;
     border: 0;
     margin: 15px 0 0 15px;
-    background-color: #ffa7b6;
+    background-color: #b1ffa7;
 }
 .quiz_add_button {
     border: 0;
@@ -305,15 +314,15 @@ button:hover {
     outline: none;
     cursor: pointer;
     border-radius: 5px;
-    background-color: #da5db4;
+    background-color: #5dda72;
 }
 
 /*!quiz_write*/
 
 #quiz_write_frame {
-    background-color: #0000004b;
+    background-color: #6fa893;
     text-align: center;
-    min-height: 80vh;
+    min-height: 90vh;
     padding-top: 30px;
 }
 .quiz_write {
@@ -324,7 +333,7 @@ button:hover {
     border-radius: 10px;
 }
 .quiz_num {
-    border-right: 1px solid #c4c4c4;
+    border-right: 1px solid #40564e;
     width: 10%;
 }
 .quiz_num > p {
@@ -335,7 +344,7 @@ button:hover {
     font-weight: bold;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-    background-color: #c5c5c5;
+    background-color: #40564e;
 }
 .quiz_problem {
     width: 90%;
@@ -349,13 +358,13 @@ button:hover {
     line-height: 50px;
     outline: none;
     padding: 0 20px;
-    border: 1px solid #c4c4c4;
-    text-decoration-color: #ff0000;
+    border: 1px solid #40564e;
+    text-decoration-color: #297a2e;
 }
 .quiz_problems:focus {
     transition: 0.5s;
     text-decoration: underline;
-    text-decoration-color: #ff0000;
+    text-decoration-color: #297a2e;
 }
 .quiz_question {
     border-radius: 0 10px 0 0;
@@ -372,7 +381,7 @@ button:hover {
     margin: 50px auto 0;
     border: 0;
     border-radius: 10px;
-    background-color: #6fa893;
+    background-color: #40564e;
     color: #ffffff;
     outline: none;
 }
@@ -388,7 +397,7 @@ button:hover {
     border-radius: 10px;
     outline: none;
     cursor: pointer;
-    background-color: #567c5b;
+    background-color: #40564e;
     color: #ffffff;
 }
 
