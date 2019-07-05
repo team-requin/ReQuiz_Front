@@ -166,7 +166,7 @@ button:hover {
     text-align: center;
 }
 #login_register > a {
-    color: #df0d8f;
+    color: #13350f;
 }
 
 /*!signup*/
@@ -261,10 +261,10 @@ button:hover {
 #quiz_profile_input > button {
     width: 220px;
     height: 30px;
-    background-color: #ffa7b6;
+    background-color: #94ff85;
     border: 0;
     border-radius: 10px;
-    color: #790079;
+    color: #00791e;
     cursor: pointer;
     outline: none;
 }
