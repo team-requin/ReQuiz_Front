@@ -6,7 +6,7 @@ include("header.php");
         <p id="title">REQUIZ</p>
         <div>
             <input placeholder="Please enter the ID to search" type="text" id="user_id"/>
-            <button type="button" id="user_search">Search</button>
+            <button type="button" id="user_search" onclick="search_user()">Search</button>
         </div>
     </div>
 </div>
