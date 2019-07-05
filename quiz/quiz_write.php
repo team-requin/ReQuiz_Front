@@ -10,12 +10,12 @@ include("header.php");
             <form>
                 <input type="text" class="quiz_question quiz_problems">
                 <input type="text" class="quiz_answer quiz_problems">
-                <button class="quiz_add_problem">+플러스</button>
             </form>
         </div>
     </div>
-    <div class="quiz_making_btn">
-        <button>make!</button>
+    <button class="quiz_add_problem">+플러스</button>
+    <div class="quiz_make_frame">
+        <button class="quiz_make_btn">만들기</button>
     </div>
 </div>
 <?php
