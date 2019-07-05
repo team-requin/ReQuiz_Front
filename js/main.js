@@ -1,16 +1,17 @@
-﻿let token = sessionStorage.getItem('token');
-let data = {};
-let config = {
-  headers: {
-    'Authorization': 'Bearer '+token,
-  }
-};
-axios.post('http://10.156.147.139/auth/token_access', data, config).then(() => {
-	document.getElementById('btn1').remove();
-}).catch(() => {
-	document.getElementById('btn2').remove();
-});
-console.clear();
+﻿window.onload = () => {
+	let token = sessionStorage.getItem('token');
+	let data = {};
+	let config = {
+	  headers: {
+		'Authorization': 'Bearer '+token,
+	  }
+	};
+	if(sessionStorage.getItem('token') != null) {
+		document.getElementById('btn_login').remove();
+	} else {
+		document.getElementById('btn_logout').remove();
+	}
+}
 function show_login() {
     document.getElementById("login_frame").style.display = "block";
     document.getElementById("login_shadow").style.display = "block";
@@ -42,7 +43,7 @@ function login() {
 		alert('로그인 되었습니다');
 		sessionStorage.setItem("token", user.data.access_token);
 		hide_login();
-		document.getElementById('btn1').remove();
+		location.reload();
     }).catch(() => {
         alert('계정이 일치하지 않습니다.');
         id.value = "";
