@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="header_logo">
-                <a href="#"><img src="/img/requin.png" alt="LOGO_img"></a>
+                <a href="/"><img src="/img/requin.png" alt="LOGO_img"></a>
             </div>
         </header>
     </div>
