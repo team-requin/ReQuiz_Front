@@ -57,7 +57,7 @@ button:hover {
     transition: 0.5s;
 }
 #header header .header_btns .header_btns_frame .btn:hover {
-    transform: translate(0, -10%);
+    transform: translate(0, -10px);
     height: 55px;
     width: 95px;
 }
