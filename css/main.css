@@ -3,6 +3,14 @@
     margin: 0;
 }
 
+button {
+    cursor: pointer;
+    border-radius: 10px;
+    outline: none;
+}
+button:hover {
+    opacity: 0.8;
+}
 /*!header*/
 #header {
     height: 100px;
@@ -303,6 +311,7 @@
 /*!quiz_write*/
 
 #quiz_write_frame {
+    background-color: #0000004b;
     text-align: center;
     min-height: 80vh;
     padding-top: 30px;
@@ -357,16 +366,31 @@
     border-radius: 0 0 10px 0;
 }
 .quiz_add_problem {
-    width: 500px;
+    display: block;
+    width: 900px;
     height: 40px;
-    margin-top: 20px;
-    border: 1px solid #c4c4c4;
+    margin: 50px auto 0;
+    border: 0;
     border-radius: 10px;
     background-color: #6fa893;
     color: #ffffff;
     outline: none;
 }
-
+.quiz_make_frame {
+    width: 700px;
+    margin: 50px auto 0;
+}
+.quiz_make_btn {
+    width: 100px;
+    height: 50px;
+    float: right;
+    border: 0;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    background-color: #567c5b;
+    color: #ffffff;
+}
 
 
 
