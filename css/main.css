@@ -404,6 +404,41 @@ button:hover {
     color: #ffffff;
 }
 
+/*!quiz_read*/
+
+.quiz_read_frame {
+    min-height: 90vh;
+    border: 1px solid red;
+}
+.quiz_read {
+    width: 600px;
+    margin: 0 auto;
+    border: 1px solid blue;
+}
+.quiz_read_wapper {
+    border: 1px solid green;
+}
+.quiz_ul {
+    border: 1px solid red;
+}
+.quiz_read_question {
+    list-style-type: decimal;
+    border: 1px solid blue;
+}
+.quiz_read_answer {
+    list-style-image: url(../img/arrow.png);
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
