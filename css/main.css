@@ -41,9 +41,6 @@ button:hover {
     padding-top: 30px;
     margin-right: 20px;
 }
-/* #header header .header_btns .header_btns_frame {
-    position: absolute;
-} */
 #header header .header_btns .header_btns_frame .btn {
     height: 45px;
     line-height: 45px;
@@ -58,6 +55,7 @@ button:hover {
     transition: 0.5s;
 }
 #header header .header_btns .header_btns_frame .btn:hover {
+    transform: translate(0, -10%);
     height: 55px;
     width: 95px;
 }
