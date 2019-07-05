@@ -26,12 +26,9 @@ function login() {
         "pw": md5(pw.value)
     };
     axios.post("http://10.156.147.139/auth/login", userdata).then((user) => {
-		localStorage.token = user.data.access_token;
-		hide_login();
 		alert('로그인 되었습니다');
-		setTimeout(() => {
-			alert('로그아웃!');
-		}, 10000);
+		sessionStorage.setItem("token", user.data.access_token);
+		hide_login();
     }).catch(() => {
         alert('계정이 일치하지 않습니다.');
         id.value = "";
