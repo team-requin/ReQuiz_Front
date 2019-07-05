@@ -37,7 +37,9 @@ button:hover {
 }
 #header header .header_btns {
     height: 100px;
-    float: right;
+    position: absolute;
+    right: 0;
+    /* float: right; */
     padding-top: 30px;
     margin-right: 20px;
 }
