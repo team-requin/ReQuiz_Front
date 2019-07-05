@@ -1,4 +1,5 @@
-﻿window.onload = () => {
+﻿let server = 'http://10.156.147.139';
+window.onload = () => {
 	let token = sessionStorage.getItem('token');
 	let data = {};
 	let config = {
@@ -39,7 +40,7 @@ function login() {
         "id": id.value,
         "pw": md5(pw.value)
     };
-    axios.post("http://10.156.147.139/auth/login", userdata).then((user) => {
+    axios.post(server+'/auth/login', userdata).then((user) => {
 		alert('로그인 되었습니다');
 		sessionStorage.setItem("token", user.data.access_token);
 		hide_login();
@@ -65,7 +66,7 @@ function signup_check_name() {
 		'name': name.value
 	};
 	
-	axios.post('http://10.156.147.139/auth/samename', data).then(() => {
+	axios.post(server+'/auth/samename', data).then(() => {
 		alert('사용 가능한 닉네임입니다');
 	}).catch(() => {
 		alert('닉네임이 중복됩니다');
@@ -80,7 +81,7 @@ function signup_check_id() {
 		'id': id.value
 	};
 	
-	axios.post('http://10.156.147.139/auth/sameaccount', data).then(() => {
+	axios.post(server+'/auth/sameaccount', data).then(() => {
 		alert('사용 가능한 아이디입니다');
 	}).catch(() => {
 		alert('아이디가 중복됩니다');
@@ -101,7 +102,7 @@ function signup() {
 		'pw_check': md5(pw_check.value)
 	};
 	
-	axios.post('http://10.156.147.139/auth/register', data).then(() => {
+	axios.post(server+'/auth/register', data).then(() => {
 		alert('회원가입이 완료되었습니다');
 		hide_signup();
 		show_login();
@@ -109,5 +110,19 @@ function signup() {
 		alert('비밀번호가 일치하지 않습니다');
 		pw_check.value = '';
 		pw_check.focus();
+	});
+}
+function search_user() {
+	var id = document.getElementById('user_id');
+	
+	var data = {
+		'search_user': id.value
+	};
+	
+	axios.post(server+'/service/usersearch', data).then(() => {
+		location.href = '/quiz/';
+	}).catch(() => {
+		alert('존재하지 않는 유저입니다');
+		id.focus();
 	});
 }
