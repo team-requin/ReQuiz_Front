@@ -14,12 +14,12 @@ button:hover {
 /*!header*/
 #header {
     height: 100px;
-    line-height: 100px;
+    /* line-height: 100px; */
     background-color: #40564e;
 }
 #header header {
     height: 100px;
-    line-height: 100px;
+    /* line-height: 100px; */
 }
 #header header .header_logo {
     height: 100px;
@@ -38,9 +38,13 @@ button:hover {
 #header header .header_btns {
     height: 100px;
     float: right;
+    padding-top: 30px;
     margin-right: 20px;
 }
-#header header .header_btns .btn {
+/* #header header .header_btns .header_btns_frame {
+    position: absolute;
+} */
+#header header .header_btns .header_btns_frame .btn {
     height: 45px;
     line-height: 45px;
     width: 85px;
@@ -53,7 +57,7 @@ button:hover {
     margin-right: 5px;
     transition: 0.5s;
 }
-#header header .header_btns .btn:hover {
+#header header .header_btns .header_btns_frame .btn:hover {
     height: 55px;
     width: 95px;
 }
@@ -337,6 +341,7 @@ button:hover {
     width: 10%;
 }
 .quiz_num > p {
+    color: #ffffff;
     height: 100px;
     width: 100px;
     line-height: 100px;
@@ -344,7 +349,7 @@ button:hover {
     font-weight: bold;
     border-bottom-left-radius: 10px;
     border-top-left-radius: 10px;
-    background-color: #40564e;
+    background-color: #648277;
 }
 .quiz_problem {
     width: 90%;
@@ -381,12 +386,12 @@ button:hover {
     margin: 50px auto 0;
     border: 0;
     border-radius: 10px;
-    background-color: #40564e;
+    background-color: #648277;
     color: #ffffff;
     outline: none;
 }
 .quiz_make_frame {
-    width: 700px;
+    width: 1000px;
     margin: 50px auto 0;
 }
 .quiz_make_btn {
@@ -397,7 +402,7 @@ button:hover {
     border-radius: 10px;
     outline: none;
     cursor: pointer;
-    background-color: #40564e;
+    background-color: #648277;
     color: #ffffff;
 }
 
