@@ -442,8 +442,12 @@ button:hover {
     vertical-align: middle;
     padding: 0 10px;
 }
-.quiz_url
-
+.quiz_ul li {
+    margin-bottom: 10px;
+    height: 45px;
+    line-height: 45px;
+    border: 1px solid red;
+}
 
 /* .quiz_read_question {
     border: 1px solid blue;
@@ -456,7 +460,8 @@ button:hover {
     margin: 20px auto 0;
     width: 400px;
     height: 50px;
-    border: 1px solid red;
+    border: 0;
+    background-color: #00791e;
 }
 
 
