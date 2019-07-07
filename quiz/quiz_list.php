@@ -8,8 +8,8 @@ include("header.php");
     <div id="quiz_profile">
         <img src="http://placehold.it/200x200" alt="profile">
         <div id="quiz_profile_input">
-            <p class="profile_user_account">Please enter your account</p>
-            <p class="profile_user_nickname">Please enter your Nickname</p>
+            <p id="list_user_id" class="profile_user_account"></p>
+            <p id="list_user_name" class="profile_user_nickname"></p>
             <button>수정</button>
         </div>
     </div>

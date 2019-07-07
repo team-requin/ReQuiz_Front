@@ -5,8 +5,8 @@
     <link rel="shortcut icon" href="/img/color_requin.png">
     <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.10.0/js/md5.min.js"></script>
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script type="text/javascript" src="/js/md5.js"></script>
+	<script type="text/javascript" src="/js/axios.js"></script>
 	<script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
@@ -28,7 +28,7 @@
                 <input type="text" id="login_id" placeholder="ID" class="login_input">
                 <input type="password" id="login_pw" placeholder="Password" class="login_input" onkeypress="login(event)">
                 <button onclick="login()">login</button>
-                <p id="login_register"><a href="#" onclick="show_signup()">회원가입</a></p>
+                <p id="login_register"><a onclick="show_signup()">회원가입</a></p>
             </div>
         </div>
     </div>

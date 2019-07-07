@@ -1,5 +1,5 @@
-﻿let server = 'http://api.teamrequin.kro.kr:5000';
-//let server = 'http://10.156.147.139:5000';
+﻿//let server = 'http://api.teamrequin.kro.kr:80';
+let server = 'http://192.168.43.26:80';
 window.onload = () => {
 	let token = sessionStorage.getItem('token');
 	
@@ -132,7 +132,7 @@ function search_user(event) {
 		'search_id': id.value
 	};
 	
-	axios.post(server+'/service/searchuser', data).then(() => {
+	axios.post(server+'/service/search_user', data).then(() => {
 		location.href = '/quiz/quiz_list.php?user='+id.value;
 	}).catch(() => {
 		alert('존재하지 않는 유저입니다');
@@ -147,13 +147,25 @@ function getUrlPar(name) {
 }
 function quizList(user) {
 	var data = {
-		'user_id': user
+		'search_id': user
 	}
-	axios.post(server+'/service/getuser', data).then(() => {
-		
+	axios.post(server+'/service/search_user', data).then((data) => {
+		var info = data.data.replace(/'/gi, '"');
+		info = info.replace('},}}', '}}}');
+		info = JSON.parse(info);
+		document.getElementById('list_user_id').appendChild(document.createTextNode('Id: '+info.user.id));
+		document.getElementById('list_user_name').appendChild(document.createTextNode('Name: '+info.user.name));
 	}).catch(() => {
 		alert('존재하지 않는 유저입니다');
-		//location.href = '/';
+	});
+	axios.post(server+'/auth/token_access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
+		if(user == data.data.user_id) {
+			alert('이 페이지의 주인임');
+			return;
+		}
+		alert('로그인은 되있지만 주인이 아님');
+	}).catch(() => {
+		alert('게스트임');
 	});
 }
 function clickMoreList() {
