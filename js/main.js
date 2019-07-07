@@ -156,3 +156,8 @@ function quizList(user) {
 		//location.href = '/';
 	});
 }
+function clickMoreList() {
+	document.getElementById("quiz_read_wapper").style.height = "";
+	document.getElementById("quiz_read_wapper").style.overflow = "none";
+}
+

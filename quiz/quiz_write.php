@@ -2,14 +2,17 @@
 include("header.php");
 ?>
 <div id="quiz_write_frame">
+    <div class="quiz_write_title">
+        <input class="quiz_write_title_input" type="text" placeholder="Please enter a workbook title" autofocus="on" />
+    </div>
     <div class="quiz_write">
         <div class="quiz_num">
             <p>1</p>
         </div>
         <div class="quiz_problem">
             <form>
-                <input type="text" class="quiz_question quiz_problems">
-                <input type="text" class="quiz_answer quiz_problems">
+                <input type="text" class="quiz_question quiz_problems" placeholder="Please enter a question">
+                <input type="text" class="quiz_answer quiz_problems" placeholder="Please enter a answer">
             </form>
         </div>
     </div>

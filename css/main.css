@@ -179,6 +179,8 @@ button:hover {
 }
 #login_register > a {
     color: #13350f;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 /*!signup*/
@@ -338,6 +340,17 @@ button:hover {
     margin: 20px auto 0;
     border-radius: 10px;
 }
+.quiz_write_title {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+}
+.quiz_write_title_input {
+    padding: 5px 10px;
+    font-size: 20px;
+    outline: none;
+    border: 0;
+}
 .quiz_num {
     border-right: 1px solid #40564e;
     width: 10%;
@@ -418,20 +431,27 @@ button:hover {
     max-width: 700px;
     min-height: 90vh;
     margin: 0 auto;
-    padding-top: 50px;
+    padding: 50px 0;
 }
-.quiz_read_wapper {
-    border: 1px solid green;
+#quiz_read_wapper {
+    height: 90vh;
+    min-height: none;
+    overflow: hidden;
+    
+    /* when click more button */
+    /* height: none;
+    min-height: 90vh;
+    overflow: none; */
 }
 .quiz_read_ul {
+    margin: 50px 0;
     list-style: none;
-    border: 1px solid red;
 }
 .quiz_read_ul li {
     height: 30px;
     line-height: 30px;
     margin: 10px 0;
-    background-color: #e4e4e4;
+    background-color: #ffffff;
 }
 .quiz_read_ul li:nth-child(2n-1):before {
     content: url(../img/dot.png);
@@ -454,7 +474,6 @@ button:hover {
     margin-bottom: 10px;
     height: 45px;
     line-height: 45px;
-    border: 1px solid red;
 }
 
 /* .quiz_read_question {
@@ -465,7 +484,7 @@ button:hover {
 } */
 .quiz_more_button {
     display: block;
-    margin: 20px auto 0;
+    margin: 50px auto;
     width: 400px;
     height: 50px;
     border: 0;
@@ -484,6 +503,7 @@ button:hover {
 /*!footer*/
 
 #footer {
+    overflow: hidden;
     height: 130px;
     padding-top: 20px;
     text-align: center;
