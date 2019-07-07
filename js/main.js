@@ -1,12 +1,7 @@
 ﻿let server = 'http://api.teamrequin.kro.kr:5000';
 window.onload = () => {
 	let token = sessionStorage.getItem('token');
-	let data = {};
-	let config = {
-	  headers: {
-		'Authorization': 'Bearer '+token,
-	  }
-	};
+	
 	var btn_list = document.getElementById('header_btns_list');
 	var btn = document.createElement('button');
 	if(sessionStorage.getItem('token') != null) { //로그인 중
