@@ -1,11 +1,17 @@
-﻿//let server = 'http://api.teamrequin.kro.kr:80';
-let server = 'http://192.168.43.26:80';
+﻿let server = 'http://api.teamrequin.kro.kr';
+//let server = 'http://192.168.43.26:80';
 window.onload = () => {
 	let token = sessionStorage.getItem('token');
 	
 	var btn_list = document.getElementById('header_btns_list');
 	var btn = document.createElement('button');
 	if(sessionStorage.getItem('token') != null) { //로그인 중
+		btn_list.appendChild(btn);
+		btn.setAttribute('id', 'btn_mypage');
+		btn.setAttribute('class', 'btn');
+		btn.setAttribute('onclick', 'mypage()');
+		btn.appendChild(document.createTextNode('마이페이지'));
+		btn = document.createElement('button');
 		btn_list.appendChild(btn);
 		btn.setAttribute('id', 'btn_logout');
 		btn.setAttribute('class', 'btn');
@@ -61,6 +67,9 @@ function login(event) {
         pw.value = '';
 		id.focus();
     });
+}
+function mypage() {
+	
 }
 function logout() {
 	var check = confirm('정말 로그아웃 하시겠습니까?');
@@ -146,6 +155,7 @@ function getUrlPar(name) {
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 function quizList(user) {
+	var btn;
 	var data = {
 		'search_id': user
 	}
@@ -161,7 +171,7 @@ function quizList(user) {
 	axios.post(server+'/auth/token_access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
 		if(user == data.data.user_id) {
 			alert('이 페이지의 주인임');
-			return;
+			btn = document.createElement('button');
 		}
 		alert('로그인은 되있지만 주인이 아님');
 	}).catch(() => {

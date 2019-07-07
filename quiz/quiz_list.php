@@ -10,7 +10,7 @@ include("header.php");
         <div id="quiz_profile_input">
             <p id="list_user_id" class="profile_user_account"></p>
             <p id="list_user_name" class="profile_user_nickname"></p>
-            <button>수정</button>
+            <button id="profile_edit">수정</button>
         </div>
     </div>
     <div id="quiz_list">
