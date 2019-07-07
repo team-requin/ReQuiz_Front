@@ -39,24 +39,23 @@ button:hover {
     height: 100px;
     position: absolute;
     right: 0;
-    padding-top: 30px;
+    /* padding-top: 30px; */
+    padding: 30px;
     margin-right: 20px;
 }
 #header header .header_btns .header_btns_frame .btn {
     height: 45px;
     line-height: 45px;
     width: 85px;
-    border-radius: 15px;
     border: 0;
-    outline: none;
-    cursor: pointer;
+    border-radius: 15px;
     background-color: #5b7c70;
     color: #ffffff;
     margin-right: 5px;
     transition: 0.5s;
 }
 #header header .header_btns .header_btns_frame .btn:hover {
-    transform: translate(0, -10px);
+    transform: translate(5px, -5px);
     height: 55px;
     width: 95px;
 }

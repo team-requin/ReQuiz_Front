@@ -14,7 +14,7 @@
         <header>
             <div class="header_btns">
                 <div id="header_btns_list" class="header_btns_frame">
-                </div>
+            </div>
             </div>
             <div class="header_logo">
                 <a href="/"><img src="/img/requin.png" alt="LOGO_img"></a>
@@ -24,7 +24,7 @@
     <div id="login_frame">
         <div id="login">
             <div>
-                <p id="login_title">LOGIN</p>
+                <p id="login_title" ondragable>LOGIN</p>
                 <input type="text" id="login_id" placeholder="ID" class="login_input">
                 <input type="password" id="login_pw" placeholder="Password" class="login_input" onkeypress="login(event)">
                 <button onclick="login()">login</button>
