@@ -36,7 +36,7 @@
     </div>
     <div id="signup_frame">
         <div id="signup">
-            <form>
+            <div>
                 <p id="signup_title">Signup</p>
                 <div>
                     <input type="text" id="signup_name" autocomplete="off" placeholder="Nickname" class="signup_input">
@@ -49,7 +49,7 @@
                 <input type="password" id="signup_pw" autocomplete="off" placeholder="Password" class="signup_input">
                 <input type="password" id="signup_pw_check" autocomplete="off" placeholder="Confirm Password" class="signup_input">
                 <button class="signup_btn" onclick="signup()">Signup</button>
-            </form>
+            </div>
         </div>
     </div>
     <div id="login_shadow" onclick="hide_login(); hide_signup()"></div>
