@@ -1,4 +1,5 @@
 ﻿let server = 'http://api.teamrequin.kro.kr:5000';
+//let server = 'http://10.156.147.139:5000';
 window.onload = () => {
 	let token = sessionStorage.getItem('token');
 	
@@ -19,23 +20,23 @@ window.onload = () => {
 	}
 }
 function show_login() {
-    document.getElementById("login_frame").style.display = "block";
-    document.getElementById("login_shadow").style.display = "block";
+    document.getElementById('login_frame').style.display = 'block';
+    document.getElementById('login_shadow').style.display = 'block';
 	document.getElementById('login_id').focus();
 }
 function hide_login() {
-    document.getElementById("login_frame").style.display = "none";
-    document.getElementById("login_shadow").style.display = "none";
+    document.getElementById('login_frame').style.display = 'none';
+    document.getElementById('login_shadow').style.display = 'none';
 }
 function show_signup() {
-    document.getElementById("login_frame").style.display = "none";
-    document.getElementById("signup_frame").style.display = "block";
-    document.getElementById("login_shadow").style.display = "block";
+    document.getElementById('login_frame').style.display = 'none';
+    document.getElementById('signup_frame').style.display = 'block';
+    document.getElementById('login_shadow').style.display = 'block';
 	document.getElementById('signup_name').focus();
 }
 function hide_signup() {
-    document.getElementById("signup_frame").style.display = "none";
-    document.getElementById("login_shadow").style.display = "none";
+    document.getElementById('signup_frame').style.display = 'none';
+    document.getElementById('login_shadow').style.display = 'none';
 }
 function login(event) {
 	
@@ -46,18 +47,18 @@ function login(event) {
 	var pw = document.getElementById('login_pw');
 	
 	var userdata = {
-        "id": id.value,
-        "pw": md5(pw.value)
+        'id': id.value,
+        'pw': md5(pw.value)
     };
     axios.post(server+'/auth/login', userdata).then((user) => {
 		alert('로그인 되었습니다');
-		sessionStorage.setItem("token", user.data.access_token);
+		sessionStorage.setItem('token', user.data.access_token);
 		hide_login();
 		location.reload();
     }).catch(() => {
         alert('계정이 일치하지 않습니다.');
-        id.value = "";
-        pw.value = "";
+        id.value = '';
+        pw.value = '';
 		id.focus();
     });
 }
@@ -139,10 +140,10 @@ function search_user(event) {
 	});
 }
 function getUrlPar(name) {
-    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
         results = regex.exec(location.search);
-    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 function quizList(user) {
 	var data = {
@@ -152,6 +153,6 @@ function quizList(user) {
 		
 	}).catch(() => {
 		alert('존재하지 않는 유저입니다');
-		location.href = '/';
+		//location.href = '/';
 	});
 }
