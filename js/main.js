@@ -1,4 +1,4 @@
-﻿let server = 'http://ec2-15-164-169-0.ap-northeast-2.compute.amazonaws.com:5000';
+﻿let server = 'http://api.teamrequin.kro.kr:5000';
 window.onload = () => {
 	let token = sessionStorage.getItem('token');
 	let data = {};
@@ -112,17 +112,37 @@ function signup() {
 		pw_check.focus();
 	});
 }
-function search_user() {
+function search_user(event) {
+	if(event != null && event.code != 'Enter' && event.code != 'NumpadEnter') {
+		return;
+	}
 	var id = document.getElementById('user_id');
 	
 	var data = {
-		'search_user': id.value
+		'search_id': id.value
 	};
 	
-	axios.post(server+'/service/usersearch', data).then(() => {
-		location.href = '/quiz/';
+	axios.post(server+'/service/searchuser', data).then(() => {
+		location.href = '/quiz/quiz_list.php?user='+id.value;
 	}).catch(() => {
 		alert('존재하지 않는 유저입니다');
 		id.focus();
+	});
+}
+function getUrlPar(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+function quizList(user) {
+	var data = {
+		'user_id': user
+	}
+	axios.post(server+'/service/getuser', data).then(() => {
+		
+	}).catch(() => {
+		alert('존재하지 않는 유저입니다');
+		location.href = '/';
 	});
 }
