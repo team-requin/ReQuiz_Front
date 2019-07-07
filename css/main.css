@@ -413,7 +413,7 @@ button:hover {
     border: 1px solid red;
 }
 .quiz_read {
-    width: 600px;
+    max-width: 700px;
     min-height: 90vh;
     margin: 0 auto;
     border: 1px solid blue;
@@ -435,6 +435,9 @@ button:hover {
     display: inline-block;
     vertical-align: middle;
     padding: 0 10px;
+}
+.quiz_ul li:nth-child(2n) {
+    padding: 0 50px;
 }
 .quiz_ul li:nth-child(2n):before {
     content: url(../img/arrow.png);
