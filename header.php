@@ -14,7 +14,7 @@
         <header>
             <div class="header_btns">
                 <div id="header_btns_list" class="header_btns_frame">
-            </div>
+                </div>
             </div>
             <div class="header_logo">
                 <a href="/"><img src="/img/requin.png" alt="LOGO_img"></a>

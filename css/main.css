@@ -39,8 +39,8 @@ button:hover {
     height: 100px;
     position: absolute;
     right: 0;
-    /* padding-top: 30px; */
-    padding: 30px;
+    padding-top: 30px;
+    /* padding: 30px; */
     margin-right: 20px;
 }
 #header header .header_btns .header_btns_frame .btn {
@@ -51,13 +51,11 @@ button:hover {
     border-radius: 15px;
     background-color: #5b7c70;
     color: #ffffff;
-    margin-right: 5px;
+    margin: 0 10px;
     transition: 0.5s;
 }
 #header header .header_btns .header_btns_frame .btn:hover {
-    transform: translate(5px, -5px);
-    height: 55px;
-    width: 95px;
+    transform: scale(1.2);
 }
 
 #container {
