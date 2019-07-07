@@ -1,5 +1,5 @@
-﻿window.onload = () => {
-	let server = 'http://api.teamrequin.kro.kr:5000';
+﻿let server = 'http://api.teamrequin.kro.kr:5000';
+window.onload = () => {
 	let token = sessionStorage.getItem('token');
 	let data = {};
 	let config = {
@@ -7,14 +7,21 @@
 		'Authorization': 'Bearer '+token,
 	  }
 	};
-	if(sessionStorage.getItem('token') != null) {
-		document.getElementById('btn_login').remove();
-	} else {
-		document.getElementById("header_btns_list").appendChild(document.createElement("button"));
-		document.getElementById('btn_logout').remove();
+	var btn_list = document.getElementById('header_btns_list');
+	var btn = document.createElement('button');
+	if(sessionStorage.getItem('token') != null) { //로그인 중
+		btn_list.appendChild(btn);
+		btn.setAttribute('id', 'btn_logout');
+		btn.setAttribute('class', 'btn');
+		btn.setAttribute('onclick', 'logout()');
+		btn.appendChild(document.createTextNode('로그아웃'));
+	} else { //로그아웃 중
+		btn_list.appendChild(btn);
+		btn.setAttribute('id', 'btn_login');
+		btn.setAttribute('class', 'btn');
+		btn.setAttribute('onclick', 'show_login()');
+		btn.appendChild(document.createTextNode('로그인'));
 	}
-	
-	let login_btn = document.createElement("button");
 }
 function show_login() {
     document.getElementById("login_frame").style.display = "block";
