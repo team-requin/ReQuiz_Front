@@ -261,15 +261,15 @@ button:hover {
     padding-top: 100px;
     text-align: center;
 }
-#quiz_profile_input > input {
+#quiz_profile_input > p {
     display: block;
     margin: 20px auto;
     width: 220px;
     height: 40px;
     line-height: 40px;
     padding: 0 10px;
-    outline: none;
-    border: 1px solid #b1ffa7;
+    border-radius: 10px;
+    background-color: #ffffff;
 }
 #quiz_profile_input > button {
     width: 220px;
@@ -285,19 +285,21 @@ button:hover {
     padding-top: 100px;
     width: 70%;
 }
-#quiz_list > div {
+.quiz_list_frame {
     display: flex;
     height: 80px;
 }
-#quiz_list > div > div {
+.quiz_list_title {
     width: 70%;
-    border: 1px solid #b1ffa7;
+    /* border: 1px solid #b1ffa7; */
+    border-radius: 10px;
     margin-top: 15px;
     padding-left: 10px;
     height: 70px;
     line-height: 70px;
+    background-color: #ffffff;
 }
-#quiz_list > div > button {
+.quiz_list_modify {
     width: 10%;
     height: 70px;
     outline: none;
@@ -410,42 +412,45 @@ button:hover {
 
 .quiz_read_frame {
     min-height: 90vh;
-    border: 1px solid red;
+    background-color: #6fa893;
 }
 .quiz_read {
     max-width: 700px;
     min-height: 90vh;
     margin: 0 auto;
-    border: 1px solid blue;
+    padding-top: 50px;
 }
 .quiz_read_wapper {
-    margin-top: 30px;
     border: 1px solid green;
 }
-.quiz_ul {
+.quiz_read_ul {
     list-style: none;
     border: 1px solid red;
 }
-.quiz_ul li {
+.quiz_read_ul li {
     height: 30px;
     line-height: 30px;
+    margin: 10px 0;
+    background-color: #e4e4e4;
 }
-.quiz_ul li:nth-child(2n-1):before {
-    content: "";
+.quiz_read_ul li:nth-child(2n-1):before {
+    content: url(../img/dot.png);
     display: inline-block;
     vertical-align: middle;
     padding: 0 10px;
+    width: 10px;
+    height: 10px;
 }
-.quiz_ul li:nth-child(2n) {
-    padding: 0 50px;
+.quiz_read_ul li:nth-child(2n) {
+    padding: 0 30px;
 }
-.quiz_ul li:nth-child(2n):before {
+.quiz_read_ul li:nth-child(2n):before {
     content: url(../img/arrow.png);
     display: inline-block;
     vertical-align: middle;
     padding: 0 10px;
 }
-.quiz_ul li {
+.quiz_read_ul li {
     margin-bottom: 10px;
     height: 45px;
     line-height: 45px;
@@ -464,10 +469,9 @@ button:hover {
     width: 400px;
     height: 50px;
     border: 0;
+    color: #ffffff;
     background-color: #00791e;
 }
-
-
 
 
 
