@@ -1,4 +1,4 @@
-﻿let server = 'http://10.156.147.139';
+﻿let server = 'http://ec2-15-164-169-0.ap-northeast-2.compute.amazonaws.com:5000';
 window.onload = () => {
 	let token = sessionStorage.getItem('token');
 	let data = {};
