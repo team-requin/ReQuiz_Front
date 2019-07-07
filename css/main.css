@@ -135,7 +135,7 @@ button:hover {
     z-index: 11;
     border-radius: 10px;
 }
-#login > form {
+#login > div {
     width: 350px;
     height: 400px;
     margin: 0 auto;
@@ -148,7 +148,7 @@ button:hover {
     text-align: center;
     font-size: 30px;
 }
-#login > form > input {
+#login > div > input {
     display: flex;
     margin: 30px auto;
     width: 85%;
@@ -160,7 +160,7 @@ button:hover {
     border-radius: 15px;
     border: 0;
 }
-#login > form > button {
+#login > div > button {
     display: block;
     margin: 0 auto;
     width: 50%;
@@ -194,7 +194,7 @@ button:hover {
     z-index: 11;
     border-radius: 10px;
 }
-#signup > form {
+#signup > div {
     text-align: center;
     width: 350px;
     height: 480px;
@@ -208,12 +208,12 @@ button:hover {
     text-align: center;
     font-size: 30px;
 }
-#signup > form > input {
+#signup > div > input {
     /* display: flex; */
     width: 80%;
     margin: 10px 5px;
 }
-#signup > form > div {
+#signup > div > div {
     margin: 10px 5px;
 }
 .signup_input {
@@ -414,28 +414,50 @@ button:hover {
 }
 .quiz_read {
     width: 600px;
+    min-height: 90vh;
     margin: 0 auto;
     border: 1px solid blue;
 }
 .quiz_read_wapper {
+    margin-top: 30px;
     border: 1px solid green;
 }
 .quiz_ul {
+    list-style: none;
     border: 1px solid red;
 }
-.quiz_read_question {
-    list-style-type: decimal;
+.quiz_ul li {
+    height: 30px;
+    line-height: 30px;
+}
+.quiz_ul li:nth-child(2n-1):before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+.quiz_ul li:nth-child(2n):before {
+    content: url(../img/arrow.png);
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+.quiz_url
+
+
+/* .quiz_read_question {
     border: 1px solid blue;
 }
 .quiz_read_answer {
-    list-style-image: url(../img/arrow.png);
     border: 1px solid black;
+} */
+.quiz_more_button {
+    display: block;
+    margin: 20px auto 0;
+    width: 400px;
+    height: 50px;
+    border: 1px solid red;
 }
-
-
-
-
-
 
 
 
