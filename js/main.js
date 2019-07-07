@@ -1,5 +1,5 @@
-﻿let server = 'http://api.teamrequin.kro.kr:5000';
-window.onload = () => {
+﻿window.onload = () => {
+	let server = 'http://api.teamrequin.kro.kr:5000';
 	let token = sessionStorage.getItem('token');
 	let data = {};
 	let config = {
@@ -10,8 +10,11 @@ window.onload = () => {
 	if(sessionStorage.getItem('token') != null) {
 		document.getElementById('btn_login').remove();
 	} else {
+		document.getElementById("header_btns_list").appendChild(document.createElement("button"));
 		document.getElementById('btn_logout').remove();
 	}
+	
+	let login_btn = document.createElement("button");
 }
 function show_login() {
     document.getElementById("login_frame").style.display = "block";
@@ -32,7 +35,11 @@ function hide_signup() {
     document.getElementById("signup_frame").style.display = "none";
     document.getElementById("login_shadow").style.display = "none";
 }
-function login() {
+function login(event) {
+	
+	if(event != null && event.code != 'Enter' && event.code != 'NumpadEnter') {
+		return;
+	}
 	var id = document.getElementById('login_id');
 	var pw = document.getElementById('login_pw');
 	

@@ -13,7 +13,7 @@
     <div id="header">
         <header>
             <div class="header_btns">
-                <div class="header_btns_frame">
+                <div id="header_btns_list" class="header_btns_frame">
                     <button id="btn_login" class="btn" onclick="show_login()">로그인</button>
                     <button id="btn_logout" class="btn" onclick="logout()">로그아웃</button>
                 </div>
@@ -25,13 +25,13 @@
     </div>
     <div id="login_frame">
         <div id="login">
-            <form>
+            <div>
                 <p id="login_title">LOGIN</p>
                 <input type="text" id="login_id" placeholder="ID" class="login_input">
-                <input type="password" id="login_pw" placeholder="Password" class="login_input">
+                <input type="password" id="login_pw" placeholder="Password" class="login_input" onkeypress="login(event)">
                 <button onclick="login()">login</button>
                 <p id="login_register"><a href="#" onclick="show_signup()">회원가입</a></p>
-            </form>
+            </div>
         </div>
     </div>
     <div id="signup_frame">
