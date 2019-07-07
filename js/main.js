@@ -1,5 +1,5 @@
-﻿let server = 'http://10.156.147.139';
-window.onload = () => {
+﻿window.onload = () => {
+	let server = 'http://api.teamrequin.kro.kr:5000';
 	let token = sessionStorage.getItem('token');
 	let data = {};
 	let config = {
@@ -10,8 +10,11 @@ window.onload = () => {
 	if(sessionStorage.getItem('token') != null) {
 		document.getElementById('btn_login').remove();
 	} else {
+		document.getElementById("header_btns_list").appendChild(document.createElement("button"));
 		document.getElementById('btn_logout').remove();
 	}
+	
+	let login_btn = document.createElement("button");
 }
 function show_login() {
     document.getElementById("login_frame").style.display = "block";
@@ -32,7 +35,11 @@ function hide_signup() {
     document.getElementById("signup_frame").style.display = "none";
     document.getElementById("login_shadow").style.display = "none";
 }
-function login() {
+function login(event) {
+	
+	if(event != null && event.code != 'Enter' && event.code != 'NumpadEnter') {
+		return;
+	}
 	var id = document.getElementById('login_id');
 	var pw = document.getElementById('login_pw');
 	
@@ -112,17 +119,37 @@ function signup() {
 		pw_check.focus();
 	});
 }
-function search_user() {
+function search_user(event) {
+	if(event != null && event.code != 'Enter' && event.code != 'NumpadEnter') {
+		return;
+	}
 	var id = document.getElementById('user_id');
 	
 	var data = {
-		'search_user': id.value
+		'search_id': id.value
 	};
 	
-	axios.post(server+'/service/usersearch', data).then(() => {
-		location.href = '/quiz/';
+	axios.post(server+'/service/searchuser', data).then(() => {
+		location.href = '/quiz/quiz_list.php?user='+id.value;
 	}).catch(() => {
 		alert('존재하지 않는 유저입니다');
 		id.focus();
+	});
+}
+function getUrlPar(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+function quizList(user) {
+	var data = {
+		'user_id': user
+	}
+	axios.post(server+'/service/getuser', data).then(() => {
+		
+	}).catch(() => {
+		alert('존재하지 않는 유저입니다');
+		location.href = '/';
 	});
 }
