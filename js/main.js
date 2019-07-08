@@ -80,7 +80,7 @@ function logout() {
 	}
 }
 function signup_check_name() {
-	var name = document.getElementById('signup_name');
+	var name = document.getElementById('signup-name');
 	
 	var data = {
 		'name': name.value
@@ -142,7 +142,7 @@ function search_user(event) {
 		'search_id': id.value
 	};
 	
-	axios.post(server+'/service/search_user', data).then(() => {
+	axios.post(server+'/service/search-user', data).then(() => {
 		location.href = '/quiz/quiz_list.php?user='+id.value;
 	}).catch(() => {
 		alert('존재하지 않는 유저입니다');

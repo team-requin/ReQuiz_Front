@@ -2,13 +2,13 @@ var btn, i, count = 0;
 var data = {
 	'search_id': getUrlPar('user')
 }
-axios.post(server+'/service/search_user', data).then((data) => {
+axios.post(server+'/service/search-user', data).then((data) => {
 	info = data.data;
 	count = Object.keys(info.workbook).length;
 	document.getElementById('list_user_id').appendChild(document.createTextNode('Id: '+info.user.id));
 	document.getElementById('list_user_name').appendChild(document.createTextNode('Name: '+info.user.name));
 	if(sessionStorage.getItem('token') != null) {
-		axios.post(server+'/auth/token_access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
+		axios.post(server+'/auth/token-access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
 			if(getUrlPar('user') == data.data.user_id) {
 				var btn_place = document.getElementById('quiz_profile_input');
 				btn = document.createElement('button');
