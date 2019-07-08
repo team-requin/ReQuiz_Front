@@ -505,30 +505,51 @@ button:hover {
     border: 2px solid blue;
 }
 .quiz_solve_workbook_title {
-    height: 10%;
+    padding: 10px 0;
+    height: 85px;
 }
 .quiz_solve_workbook_title > span {
     display: block;
     font-size: 50px;
     text-align: center;
     overflow: hidden;
+    color: #ffffff;
 }
 
 .quiz_solve_content_wrapper {
-    height: 70%;
+    /* height: 300px; */
+    padding: 80px 45px;
     border: 1px solid red;
 }
-.solve_content_title {
-    height: 70%;
+.solve_content_question {
+    display: flex;
+    height: 114px;
+    line-height: 114px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
     border: 1px solid green;
 }
-.solve_content_answer {
-    height: 30%;
+.quiz_solve_num {
+    width: 20%;
+    font-weight: bold;
+    border: 1px solid red;
+}
+.quiz_solve_title {
+    width: 80%;
+    border: 1px solid blueviolet;
+}
 
+.solve_content_answer {
+    display: flex;
+    height: 114px;
+    line-height: 114px;
+    width: 20%;
+    color: #ffffff;
     border: 1px solid yellow;
 }
 .quiz_solve_bottom {
-    height: 20%;
+    height: 15%;
     border: 1px solid red;
 }
 

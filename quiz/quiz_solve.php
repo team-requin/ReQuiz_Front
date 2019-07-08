@@ -8,12 +8,13 @@ include("header.php");
         </div>
 
         <div class="quiz_solve_content_wrapper">
-            <div class="solve_content_title">
+            <div class="solve_content_question">
                 <div class="quiz_solve_num">문제1</div>
                 <div class="quiz_solve_title">문제 제목</div>
             </div>
             <div class="solve_content_answer">
                 <div class="quiz_solve_answer">답</div>
+                <input type="text" class="" placeholder="qwe" autofocus="on">
             </div>
         </div>
         
