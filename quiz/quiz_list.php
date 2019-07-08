@@ -10,12 +10,23 @@ include("header.php");
             <p id="list_user_name" class="profile_user_nickname"></p>
         </div>
     </div>
+<<<<<<< HEAD
     <span id="no_list">게시물이 존재하지 않습니다.</span>
     <div id="quiz_list">
         <div id="quiz_list_add_button_frame">
             <button id="quiz_add_button">추가하기</button>
         </div>
     </div>
+=======
+    <!--<div id="quiz_list">
+        <div id="quiz_list_add_button_frame">
+            <button id="quiz_add_button">추가하기</button>
+        </div>
+    </div>-->
+    <!-- <div id="no_list">
+        <span>게시물이 존재하지 않습니다.</span>
+    </div> -->
+>>>>>>> master
 </div>
 
 <?php
