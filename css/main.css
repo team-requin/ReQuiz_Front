@@ -285,18 +285,23 @@ button:hover {
     outline: none;
 }
 #quiz_list {
+    position: relative;
     padding-top: 100px;
     width: 70%;
+}
+.no_list {
+    position: absolute;
+    text-align: center;
 }
 .quiz_list_frame {
     display: flex;
     height: 80px;
 }
 .quiz_list_title {
-    width: 70%;
+    width: 730px;
+    margin: 15px auto 0;
     /* border: 1px solid #b1ffa7; */
     border-radius: 10px;
-    margin-top: 15px;
     padding-left: 10px;
     height: 70px;
     line-height: 70px;

@@ -9,7 +9,11 @@ include("header.php");
             <p id="list_user_name" class="profile_user_nickname"></p>
         </div>
     </div>
-    <div id="quiz_list"></div>
+    <div id="quiz_list">
+        <div class="no_list">
+            <p>게시물이 존재하지 않습니다.</p>
+        </div>
+    </div>
 </div>
 
 <?php
