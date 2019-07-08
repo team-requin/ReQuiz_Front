@@ -4,6 +4,7 @@
 }
 
 button {
+    border: 0;
     border-radius: 10px;
     cursor: pointer;
     outline: none;
@@ -57,10 +58,9 @@ button:hover {
 #header header .header_btns .header_btns_frame .btn:hover {
     transform: scale(1.2);
 }
-
-#container {
+/* #container {
     height: 50vh;
-}
+} */
 
 /*!main*/
 
@@ -256,6 +256,7 @@ button:hover {
     min-height: 100vh;
     position: relative;
     display: flex;
+    padding-bottom: 50px;
     background-color: #6fa893;
 }
 #quiz_profile {
@@ -270,8 +271,8 @@ button:hover {
     height: 40px;
     line-height: 40px;
     padding: 0 10px;
+    text-align: left;
     border-radius: 10px;
-    background-color: #ffffff;
 }
 #quiz_profile_input > button {
     width: 220px;
@@ -311,6 +312,7 @@ button:hover {
     margin: 15px 0 0 15px;
     background-color: #b1ffa7;
 }
+/*todo : <button class="quiz_add_button">문제 만들기</button>*/
 .quiz_add_button {
     border: 0;
     margin: 30px 0 0 55px;
@@ -436,7 +438,7 @@ button:hover {
     margin: 0 auto;
     padding: 50px 0;
 }
-#quiz_read_wapper {
+#quiz_read_wrapper {
     height: 90vh;
     min-height: none;
     overflow: hidden;
@@ -487,6 +489,53 @@ button:hover {
     color: #ffffff;
     background-color: #00791e;
 }
+
+/*!quiz_solve*/
+
+#quiz_solve {
+    /* height: 90vh; */
+    min-height: 90vh;
+    padding: 50px 0;
+    background-color: #6fa893;
+}
+.quiz_solve_wrapper {
+    width: 900px;
+    height: 90vh;
+    margin: 0 auto;
+    border: 2px solid blue;
+}
+.quiz_solve_workbook_title {
+    height: 10%;
+}
+.quiz_solve_workbook_title > span {
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.quiz_solve_content_wrapper {
+    height: 70%;
+    border: 1px solid red;
+}
+.solve_content_title {
+    height: 70%;
+    border: 1px solid green;
+}
+.solve_content_answer {
+    height: 30%;
+
+    border: 1px solid yellow;
+}
+.quiz_solve_bottom {
+    height: 20%;
+    border: 1px solid red;
+}
+
+
+
+
+
 
 
 
