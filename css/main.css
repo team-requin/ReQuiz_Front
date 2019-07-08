@@ -260,7 +260,7 @@ button:hover {
     background-color: #6fa893;
 }
 #quiz_profile {
-    width: 30%;
+    width: 455px;
     padding-top: 100px;
     text-align: center;
 }
@@ -270,9 +270,11 @@ button:hover {
     width: 200px;
     height: 40px;
     line-height: 40px;
+    font-size: 20px;
     padding: 0 10px;
     text-align: left;
-    border-radius: 10px;
+    border-bottom: 1px solid #968383;
+    /* border-bottom: 1px solid #979797; */
 }
 #quiz_profile_input > button {
     width: 220px;
@@ -287,14 +289,18 @@ button:hover {
 #quiz_list {
     position: relative;
     padding-top: 100px;
-    width: 70%;
+    width: 800px;
 }
 .no_list {
     position: absolute;
-    text-align: center;
+    right: 490px;
+    top: 250px;
+}
+.no_list span {
+    font-size: 30px;
 }
 .quiz_list_frame {
-    display: flex;
+    /* display: flex; */
     height: 80px;
 }
 .quiz_list_title {
