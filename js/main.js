@@ -2,7 +2,7 @@
 let server = 'http://10.156.147.139:80';
 let filename = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('?');
 filename = filename[0];
-let info, tmp;
+let info;
 window.onload = () => {
 	var btn_list = document.getElementById('header_btns_list');
 	var btn = document.createElement('button');
@@ -38,34 +38,33 @@ window.onload = () => {
 			document.getElementById('list_user_name').appendChild(document.createTextNode('Name: '+info.user.name));
 			if(sessionStorage.getItem('token') != null) {
 				axios.post(server+'/auth/token_access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
-					if(user == data.data.user_id) {
+					if(getUrlPar('user') == data.data.user_id) {
 						var btn_place = document.getElementById('quiz_profile_input');
 						btn = document.createElement('button');
 						btn_place.appendChild(btn);
 						btn.setAttribute('id', 'btn_profile_edit');
 						btn.setAttribute('onclick', 'alert("아직 수정 안돼요")');
 						btn.appendChild(document.createTextNode('회원정보 수정'));
-						tmp = true;
+						sessionStorage.setItem('tmp', 1);
 					}
 				}).catch(() => {
-					tmp = false;
+					
 				});
 			}
 			var list = document.getElementById('quiz_list');
-					
 			for(i = 0; i < count; i++) {
 				var div = document.createElement('div');
 				var title = document.createElement('div');
-				var btn = document.createElement('button');
 				div.setAttribute('class', 'quiz_list_frame');
 				title.setAttribute('class', 'quiz_list_title');
 				title.setAttribute('onclick', 'location.href="quiz_read.php?uuid='+info.workbook[i].uuid+'"');
-				btn.setAttribute('class', 'quiz_list_modify');
-				btn.appendChild(document.createTextNode('수정하기'));
 				list.appendChild(div);
 				div.appendChild(title);
 				title.appendChild(document.createTextNode(info.workbook[i].name));
-				if(tmp) {
+				if(sessionStorage.getItem('tmp')) {
+					var btn = document.createElement('button');
+					btn.setAttribute('class', 'quiz_list_edit');
+					btn.appendChild(document.createTextNode('수정하기'));
 					div.appendChild(btn);
 				}
 			}
