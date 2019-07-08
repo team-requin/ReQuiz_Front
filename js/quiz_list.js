@@ -2,20 +2,27 @@ var btn, i, count = 0;
 var data = {
 	'search_id': getUrlPar('user')
 }
-axios.post(server+'/service/search_user', data).then((data) => {
+axios.post(server+'/service/search-user', data).then((data) => {
 	info = data.data;
 	count = Object.keys(info.workbook).length;
 	document.getElementById('list_user_id').appendChild(document.createTextNode('Id: '+info.user.id));
 	document.getElementById('list_user_name').appendChild(document.createTextNode('Name: '+info.user.name));
 	if(sessionStorage.getItem('token') != null) {
-		axios.post(server+'/auth/token_access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
+		axios.post(server+'/auth/token-access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
 			if(getUrlPar('user') == data.data.user_id) {
+				var list = document.getElementById('quiz_list');
+				var div = document.createElement('div');
 				var btn_place = document.getElementById('quiz_profile_input');
 				btn = document.createElement('button');
 				btn_place.appendChild(btn);
 				btn.setAttribute('id', 'btn_profile_edit');
 				btn.setAttribute('onclick', 'alert("아직 수정 안돼요")');
 				btn.appendChild(document.createTextNode('회원정보 수정'));
+				div.setAttribute('id', 'quiz_list_add_button_frame');
+				list.appendChild(div);
+				btn = document.createElement('button');
+				btn.setAttribute('id', 'quiz_add_button');
+				btn.appendChild(document.createTextNode('추가하기'));
 				make_list(1);
 			} else {
 				make_list(0);
