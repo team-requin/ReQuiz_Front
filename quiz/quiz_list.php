@@ -9,8 +9,7 @@ include("header.php");
             <p id="list_user_name" class="profile_user_nickname"></p>
         </div>
     </div>
-    <div id="quiz_list">
-    </div>
+    <div id="quiz_list"></div>
 </div>
 
 <?php
