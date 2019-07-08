@@ -14,7 +14,7 @@ include("header.php");
             <button class="quiz_add_button">추가하기</button>
         </div>
     </div>
-    <!-- <div class="no_list">
+    <!-- <div id="no_list">
         <span>게시물이 존재하지 않습니다.</span>
     </div> -->
 </div>

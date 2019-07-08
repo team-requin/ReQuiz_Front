@@ -19,12 +19,11 @@ input {
 /*!header*/
 #header {
     height: 100px;
-    /* line-height: 100px; */
-    background-color: #40564e;
+    /* background: linear-gradient(to bottom, rgb(255, 163, 255), rgba(120, 228, 255, 0.644)); */
+    background: linear-gradient(to right bottom, #187aca, #4193f0 50%, #80f0ff);
 }
 #header header {
     height: 100px;
-    /* line-height: 100px; */
 }
 #header header .header_logo {
     height: 100px;
@@ -54,7 +53,7 @@ input {
     width: 85px;
     border: 0;
     border-radius: 15px;
-    background-color: #5b7c70;
+    background-color: #ade9e7;
     color: #ffffff;
     margin: 0 10px;
     transition: 0.5s;
@@ -67,16 +66,19 @@ input {
 
 #main {
     height: 550px;
-    padding-top: 100px;
-    background-color: #6fa893;
+    padding-top: 30px;
+    padding-bottom: 100px;
+    background-image: url(../img/index_background_img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-#main > div {
+.main_wrapper {
     text-align: center;
-    height: auto;
-    margin: 0 auto;
-    width: 500px;
+    padding-top: 30px;
+    height: 100%;
 }
 #title {
+    text-shadow: -2px 2px 3px #000000;
     color: #ffffff;
     font-size: 80px;
     font-weight: bold;
@@ -94,7 +96,6 @@ input {
     padding: 0 10px;
     width: 400px;
     height: 50px;
-    border: 1px solid #ffaef8;
     border-radius: 10px;
     outline: none;
 }
@@ -105,8 +106,8 @@ input {
     cursor: pointer;
     width: 400px;
     height: 40px;
-    color: #ffffff;
-    background-color: #40564e;
+    color: #000;
+    background-color: #ade9e7;
 }
 
 /*!login*/
@@ -141,7 +142,7 @@ input {
     margin: 0 auto;
     border-radius: 10px;
     /* background: linear-gradient(to bottom, purple , white 25%, red , black ); */
-    background: #7a978d;
+    background-color: #ade9e7;
 }
 #login_title {
     user-select: none;
@@ -149,9 +150,9 @@ input {
     text-align: center;
     font-size: 30px;
 }
-#login_tite::selection {
+/* #login_tite::selection {
     background-color: #000000;
-}
+} */
 #login > div > input {
     display: flex;
     margin: 30px auto;
@@ -205,7 +206,7 @@ input {
     height: 480px;
     margin: 0 auto;
     border-radius: 10px;
-    background: #7a978d;
+    background-color: #ade9e7;
 }
 #signup_title {
     color: #ffffff;
@@ -247,7 +248,7 @@ input {
     border-radius: 5px;
     cursor: pointer;
     outline: none;
-    background-color: #40564e;
+    background-color: #596ac9;
 }
 
 
@@ -258,7 +259,7 @@ input {
     display: flex;
     min-height: 700px;
     padding-bottom: 50px;
-    background-color: #6fa893;
+    background-color: #ade9e7;
 }
 #quiz_profile {
     width: 300px;
@@ -294,12 +295,12 @@ input {
     width: 1000px;
     margin: 0 auto;
 }
-.no_list {
+#no_list {
     position: absolute;
     right: 490px;
     top: 200px;
 }
-.no_list span {
+#no_list span {
     font-size: 30px;
     text-shadow: 0 5px 10px #000000;
 }

@@ -2,7 +2,7 @@
 include("header.php");
 ?>
 <div id="main">
-    <div>
+    <div class="main_wrapper">
         <p id="title">REQUIZ</p>
         <div>
             <input placeholder="Please enter the ID to search" type="text" id="user_id" onkeypress="search_user(event)" />
