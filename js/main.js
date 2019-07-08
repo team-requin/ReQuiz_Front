@@ -1,5 +1,5 @@
-﻿let server = 'http://api.teamrequin.kro.kr';
-//let server = 'http://10.156.147.139:80';
+﻿//let server = 'http://api.teamrequin.kro.kr';
+let server = 'http://10.156.147.139:80';
 let filename = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('?');
 filename = filename[0];
 let info, tmp;
