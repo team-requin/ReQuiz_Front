@@ -11,8 +11,8 @@ include("header.php");
         </div>
     </div>
     <div id="quiz_list">
-        <div class="quiz_list_add_button_frame">
-            <button class="quiz_add_button">추가하기</button>
+        <div id="quiz_list_add_button_frame">
+            <button id="quiz_add_button">추가하기</button>
         </div>
     </div>
     <!-- <div id="no_list">
