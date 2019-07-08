@@ -48,7 +48,9 @@ window.onload = () => {
 						sessionStorage.setItem('tmp', 1);
 					}
 				}).catch(() => {
-					
+					alert('로그인 세션이 만료되었습니다');
+					sessionStorage.clear();
+					location.reload();
 				});
 			}
 			var list = document.getElementById('quiz_list');
