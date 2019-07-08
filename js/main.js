@@ -1,8 +1,9 @@
-﻿let server = 'http://api.teamrequin.kro.kr';
-//let server = 'http://192.168.43.26:80';
+﻿//let server = 'http://api.teamrequin.kro.kr';
+let server = 'http://10.156.147.139:80';
+let filename = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('?');
+filename = filename[0];
+let info;
 window.onload = () => {
-	let token = sessionStorage.getItem('token');
-	
 	var btn_list = document.getElementById('header_btns_list');
 	var btn = document.createElement('button');
 	if(sessionStorage.getItem('token') != null) { //로그인 중
@@ -23,6 +24,58 @@ window.onload = () => {
 		btn.setAttribute('class', 'btn');
 		btn.setAttribute('onclick', 'show_login()');
 		btn.appendChild(document.createTextNode('로그인'));
+	}
+	
+	if(filename == 'quiz_list.php') {
+		var btn, i, count = 0, tmp = false;
+		var data = {
+			'search_id': getUrlPar('user')
+		}
+		axios.post(server+'/service/search_user', data).then((data) => {
+			info = data.data.replace(/'/gi, '"');
+			info = info.replace('},}}', '}}}');
+			info = JSON.parse(info);
+			count = Object.keys(info.workbook).length;
+			document.getElementById('list_user_id').appendChild(document.createTextNode('Id: '+info.user.id));
+			document.getElementById('list_user_name').appendChild(document.createTextNode('Name: '+info.user.name));
+			
+			axios.post(server+'/auth/token_access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
+				if(user == data.data.user_id) {
+					var btn_place = document.getElementById('quiz_profile_input');
+					btn = document.createElement('button');
+					btn_place.appendChild(btn);
+					btn.setAttribute('id', 'btn_profile_edit');
+					btn.setAttribute('onclick', 'alert("아직 수정 안돼요")');
+					btn.appendChild(document.createTextNode('회원정보 수정'));
+					tmp = true;
+				}
+			}).catch(() => {
+				
+			}).finally(() => {
+				var list = document.getElementById('quiz_list');
+				
+				for(i = 0; i < count; i++) {
+					var div = document.createElement('div');
+					var title = document.createElement('div');
+					var btn = document.createElement('button');
+					div.setAttribute('class', 'quiz_list_frame');
+					title.setAttribute('class', 'quiz_list_title');
+					title.setAttribute('onclick', 'location.href="quiz_read.php?uuid='+info.workbook[i].uuid+'"');
+					btn.setAttribute('class', 'quiz_list_modify');
+					btn.appendChild(document.createTextNode('수정하기'));
+					list.appendChild(div);
+					div.appendChild(title);
+					title.appendChild(document.createTextNode(info.workbook[i].name));
+					if(tmp) {
+						div.appendChild(btn);
+					}
+				}
+				console.clear();
+			});
+		}).catch(() => {
+			alert('존재하지 않는 유저입니다');
+			location.href = '/';
+		});
 	}
 }
 function show_login() {
@@ -153,30 +206,6 @@ function getUrlPar(name) {
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
         results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-}
-function quizList(user) {
-	var btn;
-	var data = {
-		'search_id': user
-	}
-	axios.post(server+'/service/search_user', data).then((data) => {
-		var info = data.data.replace(/'/gi, '"');
-		info = info.replace('},}}', '}}}');
-		info = JSON.parse(info);
-		document.getElementById('list_user_id').appendChild(document.createTextNode('Id: '+info.user.id));
-		document.getElementById('list_user_name').appendChild(document.createTextNode('Name: '+info.user.name));
-	}).catch(() => {
-		alert('존재하지 않는 유저입니다');
-	});
-	axios.post(server+'/auth/token_access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
-		if(user == data.data.user_id) {
-			alert('이 페이지의 주인임');
-			btn = document.createElement('button');
-		}
-		alert('로그인은 되있지만 주인이 아님');
-	}).catch(() => {
-		alert('게스트임');
-	});
 }
 function clickMoreList() {
 	document.getElementById("quiz_read_wapper").style.height = "";
