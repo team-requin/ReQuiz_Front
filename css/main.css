@@ -254,14 +254,14 @@ input {
 /*!quiz_list*/
 
 #quiz_list_frame {
-    min-height: 100vh;
     position: relative;
     display: flex;
+    min-height: 700px;
     padding-bottom: 50px;
     background-color: #6fa893;
 }
 #quiz_profile {
-    width: 455px;
+    width: 300px;
     padding-top: 100px;
     text-align: center;
 }
@@ -290,19 +290,22 @@ input {
 #quiz_list {
     position: relative;
     padding-top: 100px;
-    width: 800px;
+    width: 1200px;
+    border: 1px solid red;
 }
 .no_list {
     position: absolute;
     right: 490px;
-    top: 250px;
+    top: 200px;
 }
 .no_list span {
     font-size: 30px;
+    text-shadow: 0 5px 10px #000000;
 }
 .quiz_list_frame {
-    /* display: flex; */
-    height: 80px;
+    display: flex;
+    border: 1px solid red;
+    /* height: 80px; */
 }
 .quiz_list_title {
     width: 730px;

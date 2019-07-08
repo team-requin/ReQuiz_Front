@@ -10,16 +10,10 @@ include("header.php");
         </div>
     </div>
     <div id="quiz_list">
-        <div class="quiz_list_frame">
-            <div class="quiz_list_title">
-                <button class="quiz_list_modify"></button>
-            </div>
-            <div class="quiz_list_title"></div>
-        </div>
     </div>
-    <!-- <div class="no_list">
+    <div class="no_list">
         <span>게시물이 존재하지 않습니다.</span>
-    </div> -->
+    </div>
 </div>
 
 <?php
