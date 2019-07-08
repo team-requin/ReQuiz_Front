@@ -1,6 +1,7 @@
 <?php
 include("header.php");
 ?>
+<script src="/js/quiz_list.js"></script>
 <div id="quiz_list_frame">
     <div id="quiz_profile">
         <img src="http://placehold.it/200x200" alt="profile">

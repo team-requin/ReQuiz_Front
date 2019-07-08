@@ -25,57 +25,6 @@ window.onload = () => {
 		btn.setAttribute('onclick', 'show_login()');
 		btn.appendChild(document.createTextNode('로그인'));
 	}
-	
-	if(filename == 'quiz_list.php') {
-		var btn, i, count = 0;
-		var data = {
-			'search_id': getUrlPar('user')
-		}
-		axios.post(server+'/service/search_user', data).then((data) => {
-			info = data.data;
-			count = Object.keys(info.workbook).length;
-			document.getElementById('list_user_id').appendChild(document.createTextNode('Id: '+info.user.id));
-			document.getElementById('list_user_name').appendChild(document.createTextNode('Name: '+info.user.name));
-			if(sessionStorage.getItem('token') != null) {
-				axios.post(server+'/auth/token_access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
-					if(getUrlPar('user') == data.data.user_id) {
-						var btn_place = document.getElementById('quiz_profile_input');
-						btn = document.createElement('button');
-						btn_place.appendChild(btn);
-						btn.setAttribute('id', 'btn_profile_edit');
-						btn.setAttribute('onclick', 'alert("아직 수정 안돼요")');
-						btn.appendChild(document.createTextNode('회원정보 수정'));
-						sessionStorage.setItem('tmp', 1);
-					}
-				}).catch(() => {
-					alert('로그인 세션이 만료되었습니다');
-					sessionStorage.clear();
-					location.reload();
-				});
-			}
-			var list = document.getElementById('quiz_list');
-			for(i = 0; i < count; i++) {
-				var div = document.createElement('div');
-				var title = document.createElement('div');
-				div.setAttribute('class', 'quiz_list_frame');
-				title.setAttribute('class', 'quiz_list_title');
-				title.setAttribute('onclick', 'location.href="quiz_read.php?uuid='+info.workbook[i].uuid+'"');
-				list.appendChild(div);
-				div.appendChild(title);
-				title.appendChild(document.createTextNode(info.workbook[i].name));
-				if(sessionStorage.getItem('tmp')) {
-					var btn = document.createElement('button');
-					btn.setAttribute('class', 'quiz_list_edit');
-					btn.appendChild(document.createTextNode('수정하기'));
-					div.appendChild(btn);
-				}
-			}
-		}).catch((error) => {
-			console.log(error);
-			alert('존재하지 않는 유저입니다');
-			location.href = '/';
-		});
-	}
 }
 function show_login() {
     document.getElementById('login_frame').style.display = 'block';
