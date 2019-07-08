@@ -262,6 +262,7 @@ input {
 }
 #quiz_profile {
     width: 300px;
+    margin-left: 100px;
     padding-top: 100px;
     text-align: center;
 }
@@ -271,7 +272,7 @@ input {
     width: 200px;
     height: 40px;
     line-height: 40px;
-    font-size: 20px;
+    font-size: 15px;
     padding: 0 10px;
     text-align: left;
     border-bottom: 1px solid #968383;
@@ -290,8 +291,8 @@ input {
 #quiz_list {
     position: relative;
     padding-top: 100px;
-    width: 1200px;
-    border: 1px solid red;
+    width: 1000px;
+    margin: 0 auto;
 }
 .no_list {
     position: absolute;
@@ -304,41 +305,42 @@ input {
 }
 .quiz_list_frame {
     display: flex;
-    border: 1px solid red;
+    margin: 25px 0;
+    padding-left: 55px;
     /* height: 80px; */
 }
 .quiz_list_title {
     width: 730px;
-    margin: 15px auto 0;
-    /* border: 1px solid #b1ffa7; */
+    height: 70px;
     border-radius: 10px;
     padding-left: 10px;
-    height: 70px;
     line-height: 70px;
     background-color: #ffffff;
 }
 .quiz_list_edit {
-    width: 10%;
+    width: 120px;
     height: 70px;
     outline: none;
+    margin-left: 25px;
     border-radius: 5px;
     cursor: pointer;
     border: 0;
-    margin: 15px 0 0 15px;
     background-color: #b1ffa7;
+}
+.quiz_list_add_button_frame {
+    /* display: flex; */
+    width: 740px;
+    padding-left: 55px;
 }
 /*todo : <button class="quiz_add_button">문제 만들기</button>*/
 .quiz_add_button {
-    border: 0;
-    margin: 30px 0 0 55px;
     display: block;
-    width: 60%;
+    width: 650px;
     height: 50px;
+    margin: 0 auto;
     font-size: 15px;
     font-weight: bold;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
+    color: #ffffff;
     background-color: #5dda72;
 }
 
@@ -582,11 +584,11 @@ input {
     width: 590px;
 }
 .quiz_solve_buttons {
-    height: 135px;
+    /* line-height: 135px; */
+    margin-top: 40px;
     padding: 20px 45px;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #00791e;
 }
 .quiz_solve_button {
     height: 50px;
