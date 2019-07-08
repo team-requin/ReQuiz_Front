@@ -18,12 +18,12 @@ axios.post(server+'/service/search-user', data).then((data) => {
 				btn.setAttribute('id', 'btn_profile_edit');
 				btn.setAttribute('onclick', 'alert("아직 수정 안돼요")');
 				btn.appendChild(document.createTextNode('회원정보 수정'));
+				make_list(1);
 				div.setAttribute('id', 'quiz_list_add_button_frame');
 				list.appendChild(div);
 				btn = document.createElement('button');
 				btn.setAttribute('id', 'quiz_add_button');
 				btn.appendChild(document.createTextNode('추가하기'));
-				make_list(1);
 			} else {
 				make_list(0);
 			}
