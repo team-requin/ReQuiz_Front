@@ -1,5 +1,3 @@
-
-
 function plus_quiz_write() {
     var quiz_write_count = document.getElementsByClassName("quiz_write").length
     if (quiz_write_count >= 20) {
