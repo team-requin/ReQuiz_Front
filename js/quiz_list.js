@@ -10,8 +10,6 @@ axios.post(server+'/service/search-user', data).then((data) => {
 	if(sessionStorage.getItem('token') != null) {
 		axios.post(server+'/auth/token-access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
 			if(getUrlPar('user') == data.data.user_id) {
-				var list = document.getElementById('quiz_list');
-				var div = document.createElement('div');
 				var btn_place = document.getElementById('quiz_profile_input');
 				btn = document.createElement('button');
 				btn_place.appendChild(btn);
@@ -19,11 +17,6 @@ axios.post(server+'/service/search-user', data).then((data) => {
 				btn.setAttribute('onclick', 'alert("아직 수정 안돼요")');
 				btn.appendChild(document.createTextNode('회원정보 수정'));
 				make_list(1);
-				div.setAttribute('id', 'quiz_list_add_button_frame');
-				list.appendChild(div);
-				btn = document.createElement('button');
-				btn.setAttribute('id', 'quiz_add_button');
-				btn.appendChild(document.createTextNode('추가하기'));
 			} else {
 				make_list(0);
 			}
@@ -60,5 +53,14 @@ function make_list(check) {
 			div_add.setAttribute('class', 'no_list');
 			div.appendChild(div_add);
 		}
+	}
+	if(check) {
+		var div = document.createElement('div');
+		var btn = document.createElement('button');
+		div.setAttribute('id', 'quiz_list_add_button_frame');
+		list.appendChild(div);
+		btn.setAttribute('id', 'quiz_add_button');
+		btn.appendChild(document.createTextNode('추가하기'));
+		div.appendChild(btn);
 	}
 }
