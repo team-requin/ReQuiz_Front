@@ -7,9 +7,7 @@ include("header.php");
     </div>
 
     <div class="quiz_write">
-        <div class="quiz_num">
-            <p>1</p>
-        </div>
+        <div class="quiz_num">1</div>
         <div class="quiz_problem">
             <form>
                 <input type="text" class="quiz_question quiz_problems" placeholder="Please enter a question">
