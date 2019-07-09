@@ -3,9 +3,9 @@ include("header.php");
 ?>
 <div id="quiz_solve">
     <div class="quiz_solve_wrapper">
-        <div class="quiz_solve_workbook_title">
+        <!-- <div class="quiz_solve_workbook_title">
             <span>문제집</span>
-        </div>
+        </div> -->
         <div class="quiz_solve_content_wrapper">
             <div class="quiz_solve_content_question">
                 <div class="quiz_solve_num">문제1</div>
