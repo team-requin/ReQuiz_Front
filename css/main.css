@@ -482,7 +482,7 @@ input {
     height: 10px;
 }
 .quiz_read_ul li:nth-child(2n) {
-    padding: 0 30px;
+    padding: 0 30px; 
 }
 .quiz_read_ul li:nth-child(2n):before {
     content: url(../img/arrow.png);
