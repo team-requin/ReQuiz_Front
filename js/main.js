@@ -1,8 +1,4 @@
-﻿var _z = console;
-Object.defineProperty( window, "console", {
-    get : function(){if( _z._commandLineAPI ){ throw "Script execution not permitted" } return _z; },
-    set : function(val){ _z = val }
-});
+﻿Object.defineProperty(console, '_commandLineAPI', { get : function() { throw '콘솔을 사용할 수 없습니다.' } });
 
 //let server = 'http://api.teamrequin.kro.kr';
 let server = 'http://10.156.147.139:80';
