@@ -67,20 +67,20 @@ input {
 
 #main {
     height: 550px;
-    padding-top: 30px;
-    padding-bottom: 100px;
+    padding-top: 120px;
     background-image: url(../img/index_background_img.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .main_wrapper {
-    text-align: center;
-    padding-top: 30px;
+    width: 600px;
+    margin: 0 auto;
     height: 100%;
 }
 #title {
     text-shadow: -2px 2px 3px #000000;
     color: #ffffff;
+    text-align: center;
     font-size: 80px;
     font-weight: bold;
     margin-bottom: 30px;
