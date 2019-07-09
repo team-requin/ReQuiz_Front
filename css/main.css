@@ -8,6 +8,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
     outline: none;
+    /* box-shadow: -1px 1px 1px #000000; */
 }
 button:hover {
     opacity: 0.8;
@@ -102,10 +103,6 @@ input {
     outline: none;
 }
 #user_search {
-    border: 0;
-    border-radius: 10px;
-    outline: none;
-    cursor: pointer;
     width: 400px;
     height: 40px;
     color: #000;
@@ -299,10 +296,8 @@ input {
 }
 #no_list {
     position: absolute;
-    right: 490px;
+    right: 430px;
     top: 200px;
-}
-#no_list span {
     font-size: 30px;
     text-shadow: 0 5px 10px #000000;
 }
@@ -318,7 +313,12 @@ input {
     border-radius: 10px;
     padding-left: 10px;
     line-height: 70px;
+    transition: 0.5s;
     background-color: #ffffff;
+    cursor: pointer;
+}
+.quiz_list_title:hover {
+    transform: scale(1.05);
 }
 .quiz_list_edit {
     width: 120px;
@@ -482,7 +482,7 @@ input {
     height: 10px;
 }
 .quiz_read_ul li:nth-child(2n) {
-    padding: 0 30px;
+    padding: 0 30px; 
 }
 .quiz_read_ul li:nth-child(2n):before {
     content: url(../img/arrow.png);
@@ -505,7 +505,7 @@ input {
     background-color: #596ac9;
 }
 #quiz_read_goto_solve_frame {
-    
+
     border: 1px solid red;
 }
 

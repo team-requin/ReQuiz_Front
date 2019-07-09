@@ -18,6 +18,7 @@ include("header.php");
     <!-- <div id="no_list">
         <span>게시물이 존재하지 않습니다.</span>
     </div> -->
+>>>>>>> master
 </div>
 
 <?php
