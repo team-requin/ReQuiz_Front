@@ -1,4 +1,6 @@
-﻿//let server = 'http://api.teamrequin.kro.kr';
+﻿Object.defineProperty(console, '_commandLineAPI', { get : function() { throw '콘솔을 사용할 수 없습니다.' } });
+
+//let server = 'http://api.teamrequin.kro.kr';
 let server = 'http://10.156.147.139:80';
 let filename = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('?');
 filename = filename[0];
