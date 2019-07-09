@@ -1,6 +1,7 @@
 <?php
 include("header.php");
 ?>
+<script src="/js/quiz_write.js"></script>
 <div id="quiz_write_frame">
     <div class="quiz_write_title">
         <input class="quiz_write_title_input" type="text" placeholder="Please enter a workbook title" autofocus="on" />

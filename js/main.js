@@ -155,8 +155,3 @@ function getUrlPar(name) {
         results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
-function clickMoreList() {
-	document.getElementById("quiz_read_wapper").style.height = "";
-	document.getElementById("quiz_read_wapper").style.overflow = "none";
-}
-
