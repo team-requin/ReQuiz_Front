@@ -41,6 +41,8 @@ function plus_quiz_write() {
     quiz_write_frame.appendChild(quiz_write);
 }
 
+// document.getElementsByClassName[0]("quiz_write")
+
 function delete_quiz_write() {
     var quiz_write = document.getElementsByClassName("quiz_write");
     quiz_write[0].parentNode.removeChild(quiz_write[0]);
