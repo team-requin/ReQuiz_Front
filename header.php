@@ -12,12 +12,12 @@
 <body>
     <div id="header">
         <header>
+            <div class="header_logo">
+                <a href="/"><img src="/img/requin.png" alt="LOGO_img"></a>
+            </div>
             <div class="header_btns">
                 <div id="header_btns_list" class="header_btns_frame">
                 </div>
-            </div>
-            <div class="header_logo">
-                <a href="/"><img src="/img/requin.png" alt="LOGO_img"></a>
             </div>
         </header>
     </div>
@@ -36,11 +36,11 @@
         <div id="signup">
             <div>
                 <p id="signup_title">Signup</p>
-                <div>
+                <div id="signup_name_frame" class="signup_form">
                     <input type="text" id="signup_name" autocomplete="off" placeholder="Nickname" class="signup_input">
                     <button class="overlap_check" onclick="signup_check_name()">Check</button>
                 </div>
-                <div>
+                <div id="signup_id_frame" class="signup_form">
                     <input type="text" id="signup_id" autocomplete="off" placeholder="ID" class="signup_input">
                     <button class="overlap_check" onclick="signup_check_id()">Check</button>
                 </div>

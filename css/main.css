@@ -3,6 +3,7 @@
     margin: 0;
 }
 body {
+    position: relative;
     background-color: #ade9e7;
 }
 button {
@@ -10,7 +11,6 @@ button {
     border-radius: 10px;
     cursor: pointer;
     outline: none;
-    /* box-shadow: -1px 1px 1px #000000; */
 }
 button:hover {
     opacity: 0.8;
@@ -21,21 +21,20 @@ input {
 }
 /*!header*/
 #header {
+    position: relative;
     height: 90px;
-    /* background: linear-gradient(to bottom, rgb(255, 163, 255), rgba(120, 228, 255, 0.644)); */
+    width: 100%;
     background: linear-gradient(to right bottom, #187aca, #4193f0 50%, #80f0ff);
 }
 #header header {
+    position: relative;
+    display: flex;
+    justify-content: center;
     height: 90px;
+    margin: 0 auto;
 }
 #header header .header_logo {
     height: 90px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}
-#header header .header_logo > a {
-    height: auto;
 }
 #header header .header_logo > a > img {
     height: 70px;
@@ -45,8 +44,8 @@ input {
 #header header .header_btns {
     position: absolute;
     right: 0;
+    top: 0;
     padding: 22.5px;
-    margin-right: 20px;
 }
 #header header .header_btns .header_btns_frame .btn {
     height: 45px;
@@ -68,14 +67,13 @@ input {
 /*!main*/
 
 #main {
-    height: 550px;
-    padding-top: 120px;
+    min-height: 400px;
+    padding-top: 200px;
     background-image: url(../img/index_background_img.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 .main_wrapper {
-    width: 600px;
     margin: 0 auto;
     height: 100%;
 }
@@ -86,10 +84,6 @@ input {
     font-size: 80px;
     font-weight: bold;
     margin-bottom: 30px;
-}
-#main > div > div {
-    height: 100px;
-    line-height: 100px;
 }
 #main > div > div > * {
     display: block;
@@ -123,7 +117,7 @@ input {
     top: 50vh;
     left: 50vw;
     transform: translate(-50%,-50%);
-    background-color: #efced736;
+    background-color: #5555552d;
     z-index: 1000;
 }
 #login {
@@ -140,18 +134,15 @@ input {
     height: 400px;
     margin: 0 auto;
     border-radius: 10px;
-    /* background: linear-gradient(to bottom, purple , white 25%, red , black ); */
-    background-color: #ade9e7;
+    background-color: #f8f8f8;
 }
 #login_title {
     user-select: none;
-    padding-top: 30px;
+    padding: 15px 0;
     text-align: center;
     font-size: 30px;
+    background-color: #187aca;
 }
-/* #login_tite::selection {
-    background-color: #000000;
-} */
 #login > div > input {
     display: flex;
     margin: 30px auto;
@@ -172,6 +163,8 @@ input {
     border: 0;
     border-radius: 10px;
     font-size: 20px;
+    color: #ffffff;
+    background-color: #187aca;
 }
 #login_register {
     margin-top: 15px;
@@ -180,7 +173,7 @@ input {
     text-align: center;
 }
 #login_register > a {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     cursor: pointer;
 }
@@ -202,24 +195,27 @@ input {
 #signup > div {
     text-align: center;
     width: 350px;
-    height: 480px;
+    height: 450px;
     margin: 0 auto;
     border-radius: 10px;
-    background-color: #ade9e7;
+    background-color: #f8f8f8;
 }
 #signup_title {
-    color: #ffffff;
-    padding: 30px 0;
+    padding: 15px 0;
     text-align: center;
     font-size: 30px;
+    color: #ffffff;
+    background-color: #187aca;
 }
 #signup > div > input {
-    /* display: flex; */
     width: 80%;
     margin: 10px 5px;
 }
-#signup > div > div {
-    margin: 10px 5px;
+.signup_form {
+    margin: 15px;
+}
+.signup_form:first-child {
+    margin-top: 30px;
 }
 .signup_input {
     width: 65%;
@@ -237,17 +233,15 @@ input {
     border: 0;
     border-radius: 10px;
     font-size: 20px;
+    color: #ffffff;
+    background-color: #187aca;
 }
 .overlap_check {
     color: #ffffff;
     width: 50px;
     height: 40px;
     line-height: 40px;
-    border: 0;
-    border-radius: 5px;
-    cursor: pointer;
-    outline: none;
-    background-color: #596ac9;
+    background-color: #187aca;
 }
 
 
@@ -257,6 +251,7 @@ input {
     position: relative;
     display: flex;
     min-height: 700px;
+    height: 100%;
     padding-bottom: 50px;
     background-color: #ade9e7;
 }
@@ -276,7 +271,6 @@ input {
     padding: 0 10px;
     text-align: left;
     border-bottom: 1px solid #968383;
-    /* border-bottom: 1px solid #979797; */
 }
 #quiz_profile_input > button {
     width: 220px;
@@ -305,7 +299,6 @@ input {
     display: flex;
     margin: 25px 0;
     padding-left: 55px;
-    /* height: 80px; */
 }
 .quiz_list_title {
     width: 730px;
@@ -328,10 +321,10 @@ input {
     border-radius: 5px;
     cursor: pointer;
     border: 0;
+    color: #ffffff;
     background-color: #596ac9;
 }
 #quiz_list_add_button_frame {
-    /* display: flex; */
     width: 740px;
     padding-left: 55px;
 }
@@ -349,6 +342,9 @@ input {
 
 /*!quiz_write*/
 
+#quiz_write_container {
+    height: 100%;
+}
 #quiz_write_frame {
     background-color: #ade9e7;
     text-align: center;
@@ -389,7 +385,6 @@ input {
 }
 .quiz_problem {
     display: flex;
-    /* width: 90%; */
     height: 100px;
     line-height: 100px;
 }
@@ -412,9 +407,6 @@ input {
     font-size: 15px;
     font-weight: bold;
 }
-/* .quiz_answer {
-    border-radius: 0 0 10px 0;
-} */
 .quiz_problem_delete {
     width: 50px;
     font-size: 10px;
@@ -453,18 +445,16 @@ input {
 /*!quiz_read*/
 
 .quiz_read_frame {
-    min-height: 900px;
+    height: 100%;
+    min-height: 1000px;
     background-color: #ade9e7;
 }
 .quiz_read {
-    max-width: 700px;
-    min-height: 900px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 50px 0;
 }
 #quiz_read_wrapper {
-    height: 650px;
-    min-height: none;
     overflow: hidden;
     
     /* if when click more button */
@@ -506,7 +496,7 @@ input {
 }
 #quiz_more_button {
     display: block;
-    margin: 50px auto;
+    margin: 0 auto;
     width: 400px;
     height: 50px;
     border: 0;
@@ -515,6 +505,7 @@ input {
 }
 #quiz_read_goto_solve_frame {
     text-align: right;
+    margin-bottom: 100px;
 }
 #quiz_read_goto_solve {
     width: 100px;
@@ -522,12 +513,21 @@ input {
     color: #ffffff;
     background-color: #596ac9;
 }
+#quiz_read_goto_solve > a {
+    display: block;
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-decoration: none;
+    color: #ffffff;
+}
 
 /*!quiz_solve*/
 
 #quiz_solve {
-    min-height: 500px;
-    width: 1519.2px;
+    /* height: 100%; */
+    /* min-height: 500px;
+    width: 1519.2px; */
     padding: 50px 0;
     background-color: #ade9e7;
 }
@@ -535,7 +535,7 @@ input {
     position: relative;
     width: 900px;
     height: 500px;
-    margin: 0 auto;
+    margin: 0 auto 150px;
     padding-top: 50px;
     border: 1px solid #596ac9;
 }
@@ -553,7 +553,6 @@ input {
 }
 
 .quiz_solve_content_wrapper {
-    /* height: 300px; */
     padding: 60px 45px 0;
 }
 .quiz_solve_content_question {
@@ -594,7 +593,6 @@ input {
     margin: 0 auto;
 }
 .quiz_solve_input {
-    /* display: block; */
     margin: 20px auto;
     padding-left: 30px;
     height: 50px;
@@ -634,12 +632,18 @@ input {
 
 
 /*!footer*/
-
+#footer_frame {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 #footer {
+    /* position: absolute;
+    bottom: 0;
+    width: 100%; */
     background-color: #ffffff;
     overflow: hidden;
-    height: 140px;
-    padding-top: 20px;
+    padding: 20px 0;
     text-align: center;
 }
 #footer > img {

@@ -6,7 +6,7 @@ include("header.php");
         <!-- <div class="quiz_solve_workbook_title">
             <span>문제집</span>
         </div> -->
-        <button class="quiz_solve_button" id="quiz_solve_stop">stop</button>
+        <button class="quiz_solve_button" id="quiz_solve_stop">Stop</button>
         <div class="quiz_solve_content_wrapper">
             <div class="quiz_solve_content_question">
                 <div class="quiz_solve_num">Q</div>
@@ -22,8 +22,8 @@ include("header.php");
         
         <div class="quiz_solve_buttons">
             <div>
-                <button class="quiz_solve_button" id="quiz_before_stop">before</button>
-                <button class="quiz_solve_button" id="quiz_next_stop">next</button>
+                <button class="quiz_solve_button" id="quiz_before_stop">Before</button>
+                <button class="quiz_solve_button" id="quiz_next_stop">Next</button>
             </div>
         </div>
     </div>
