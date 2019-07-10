@@ -6,6 +6,7 @@ let server = "http://10.156.147.139";
 let filename = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('?');
 filename = filename[0];
 let info;
+let header_token = {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}};
 window.onload = () => {
 	var btn_list = document.getElementById('header_btns_list');
 	var btn = document.createElement('button');
@@ -72,9 +73,6 @@ function login(event) {
 		id.focus();
     });
 }
-function mypage() {
-	
-}
 function logout() {
 	var check = confirm('정말 로그아웃 하시겠습니까?');
 	if(check) {
@@ -135,6 +133,12 @@ function signup() {
 		pw_check.focus();
 	});
 }
+function getUrlPar(name) {
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
+        results = regex.exec(location.search);
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
 function search_user(event) {
 	if(event != null && event.code != 'Enter' && event.code != 'NumpadEnter') {
 		return;
@@ -151,10 +155,4 @@ function search_user(event) {
 		alert('존재하지 않는 유저입니다');
 		id.focus();
 	});
-}
-function getUrlPar(name) {
-    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
-        results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
