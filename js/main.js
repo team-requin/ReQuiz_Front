@@ -10,11 +10,12 @@ let header_token = {'headers': {'Authorization': "Bearer "+sessionStorage.getIte
 window.onload = () => {
 	var btn_list = document.getElementById('header_btns_list');
 	var btn = document.createElement('button');
+	var a = document.createElement('a');
 	if(sessionStorage.getItem('token') != null) { //로그인 중
 		btn_list.appendChild(btn);
 		btn.setAttribute('id', 'btn_mypage');
 		btn.setAttribute('class', 'btn');
-		btn.setAttribute('onclick', 'mypage()');
+		btn.setAttribute('onclick', 'location.href = "/user"');
 		btn.appendChild(document.createTextNode('마이페이지'));
 		btn = document.createElement('button');
 		btn_list.appendChild(btn);

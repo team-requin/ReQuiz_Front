@@ -262,7 +262,10 @@ input {
     min-height: 700px;
     height: 100%;
     padding-bottom: 50px;
-    background-color: #ade9e7;
+    background-image: url(/user/img/user_index_background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: #ade9e7; */
 }
 #quiz_profile {
     width: 300px;
