@@ -15,9 +15,14 @@ include('header.php');
             </div>
 
             <div id="mypage_input_wrapper">
+                <p class="mypage_p">아이디</p>
+                <input type="text" class="myapge_input" id="cant_change_id">
+                <p id="cant_change_id_text">아이디는 변경이 불가능합니다.</p>
+                <p class="mypage_p">닉네임</p>
                 <input type="text" class="myapge_input">
-                <input type="text" class="myapge_input">
+                <p class="mypage_p">비밀번호</p>
                 <input type="password" class="myapge_input">
+                <p class="mypage_p">비밀번호 확인</p>
                 <input type="password" class="myapge_input">
             </div>
         </div>
