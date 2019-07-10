@@ -47,6 +47,7 @@
                 <input type="password" id="signup_pw" autocomplete="off" placeholder="Password" class="signup_input">
                 <input type="password" id="signup_pw_check" autocomplete="off" placeholder="Confirm Password" class="signup_input">
                 <button class="signup_btn" onclick="signup()">Signup</button>
+                <p id="login_register"><a onclick=" hide_signup(); show_login()">로그인 하러가기</a></p>
             </div>
         </div>
     </div>

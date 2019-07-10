@@ -9,14 +9,14 @@ axios.post(server+'/service/search-user', data).then((data) => {
 	document.getElementById('list_user_name').appendChild(document.createTextNode('Name: '+info.user.name));
 	if(sessionStorage.getItem('token') != null) {
 		axios.post(server+'/auth/token-access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
-			if(getUrlPar('user') == data.data.user_id) {
+			if(getUrlPar('user') === data.data.user_id) {
 				var btn_place = document.getElementById('quiz_profile_input');
 				var a = document.createElement('a');
 				btn = document.createElement('button');
 				btn_place.appendChild(btn);
 				btn.setAttribute('id', 'btn_profile_edit');
 				a.setAttribute('id', 'btn_profile_edit_a');
-				a.setAttribute('href', '/');
+				a.setAttribute('href', '/user/index.php');
 				a.appendChild(document.createTextNode('회원정보 수정'));
 				btn.appendChild(a);
 				make_list(1);
@@ -64,7 +64,7 @@ function make_list(check) {
 		div.setAttribute('id', 'quiz_list_add_button_frame');
 		list.appendChild(div);
 		btn.setAttribute('id', 'quiz_add_button');
-		a.appendChild(document.createTextNode('추가하기'));
+		a.appendChild(document.createTextNode('+'));
 		a.setAttribute('id', 'quiz_add_text');
 		a.setAttribute('href', 'quiz_write.php');
 		btn.appendChild(a);

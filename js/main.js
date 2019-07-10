@@ -5,7 +5,7 @@ let server = "http://10.156.147.139";
 // let server = window.atoa('aHR0cDovLzEwLjE1Ni4xNDcuMTM5Ojgw');
 let filename = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('?');
 filename = filename[0];
-let info;
+let info;	
 window.onload = () => {
 	var btn_list = document.getElementById('header_btns_list');
 	var btn = document.createElement('button');
@@ -157,4 +157,7 @@ function getUrlPar(name) {
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)'),
         results = regex.exec(location.search);
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+function back_page() {
+	history.back();
 }
