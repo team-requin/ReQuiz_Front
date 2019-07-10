@@ -668,13 +668,66 @@ input {
 
 /*!user_mypage*/
 
-#mypage_wrapper * {
-    border: 1px solid red;
-}
 #mypage_wrapper {
     height: 100%;
+    background-image: url(/user/img/user_index_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/* .mypage_content {
+    border: 1px solid black;
+} */
+#mypage_content_wrapper {
+    width: 1100px;
+    margin: 0 auto;
+}
+#mypage_main {
+    height: 565px;
+    display: flex;
+    border: 1px solid green;
+}
+#mypage_profile_wrapper * {
+    border: 1px solid red;
+}
+#mypage_profile_wrapper {
+    width: 550px;
+    padding-top: 80px;
+    border: 1px solid yellow;
+}
+#mypage_profile_hello {
+    text-align: center;
+    font-size: 30px;
+}
+#mypage_profile_image {
+    display: block;
+    width: 333px;
+    height: 333px;
+    margin: 0 auto;
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+#mypage_exp_wrapper {
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid black;
 }
 
+#mypage_exp_percent {
+    text-align: center;
+}
+
+
+
+#mypage_input_wrapper {
+    width: 550px;
+    border: 1px solid orange;
+}
+
+
+#mypage_bottom_wrapper {
+    height: 140px;
+    border: 1px solid blueviolet;
+}
 
 
 
