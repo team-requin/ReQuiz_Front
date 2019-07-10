@@ -37,6 +37,10 @@ axios.post(server+'/service/search-user', data).then((data) => {
 	location.href = '/';
 });
 function make_list(check) {
+	if(document.getElementsByClassName('quiz_list_title').length == count) {
+		console.log('해당 함수는 사용 불가합니다');
+		return;
+	}
 	var list = document.getElementById('quiz_list');
 	for(i = 0; i < count; i++) {
 		var div = document.createElement('div');
