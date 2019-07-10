@@ -8,8 +8,8 @@ axios.post(server+'/service/search-user', data).then((data) => {
 	document.getElementById('list_user_id').appendChild(document.createTextNode('Id: '+info.user.id));
 	document.getElementById('list_user_name').appendChild(document.createTextNode('Name: '+info.user.name));
 	if(sessionStorage.getItem('token') != null) {
-		axios.post(server+'/auth/token-access', {}, {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}}).then((data) => {
-			if(getUrlPar('user') === data.data.user_id) {
+		axios.post(server+'/auth/token-access', {}, header_token).then((data) => {
+			if(getUrlPar('user') == data.data.user_id) {
 				var btn_place = document.getElementById('quiz_profile_input');
 				var a = document.createElement('a');
 				btn = document.createElement('button');
