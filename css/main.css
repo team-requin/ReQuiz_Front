@@ -272,15 +272,17 @@ input {
     text-align: left;
     border-bottom: 1px solid #968383;
 }
-#quiz_profile_input > button {
+#btn_profile_edit {
     width: 220px;
     height: 30px;
     background-color: #596ac9;
-    border: 0;
-    border-radius: 10px;
     color: #ffffff;
-    cursor: pointer;
-    outline: none;
+}
+#btn_profile_edit_a {
+    width: 220px;
+    height: 30px;
+    color: #ffffff;
+    text-decoration: none;
 }
 #quiz_list {
     position: relative;
@@ -336,8 +338,15 @@ input {
     margin: 0 auto;
     font-size: 15px;
     font-weight: bold;
-    color: #ffffff;
     background-color: #596ac9;
+}
+#quiz_add_text {
+    display: block;
+    width: 650px;
+    height: 50px;
+    line-height: 50px;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 /*!quiz_write*/
@@ -618,6 +627,7 @@ input {
     top: 50px;
 }
 
+/*!user_mypage*/
 
 
 
