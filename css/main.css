@@ -809,15 +809,63 @@ input {
 /*!quiz_score*/
 
 #quiz_score_wrapper {
-    height: 100%;
     background-image: url(/user/img/user_index_background.png);
     background-size: cover;
     background-repeat: no-repeat;
+    padding: 60px 100px;
+}
+#quiz_score {
+    background-color: #ffffff;
+    font-weight: bold;
 }
 #quiz_score_title {
-    border: 1px solid red;
+    height: 145px;
+    line-height: 145px;
+    text-align: center;
+    background-color: #3995e1;
 }
-
+#quiz_score_title > p {
+    font-size: 50px;
+}
+#quiz_score_content_wrapper {
+    text-align: center;
+    height: 80%;
+}
+#quiz_score_yourscoreis {
+    height: 60px;
+    line-height: 60px;
+    font-size: 40px;
+    margin-top: 20px;
+}
+#quiz_score_score {
+    height: 350px;
+    line-height: 350px;
+    font-size: 200px;
+}
+#quiz_score_comment {
+    height: 60px;
+    line-height: 60px;
+    font-size: 40px;
+}
+#quiz_score_button_wrapper {
+    height: 115px;
+    line-height: 115px;
+}
+#quiz_score_button {
+    width: 600px;
+    margin: 0 auto;
+}
+#quiz_score_button > button {
+    height: 50px;
+    width: 200px;
+    margin: 0 40px;
+    font-size: 20px;
+    background-color: #3995e1;
+}
+#back > a, #resolve > a {
+    text-decoration: none;
+    color: #ffffff;
+}
 
 
 

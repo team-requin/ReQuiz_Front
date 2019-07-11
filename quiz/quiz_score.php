@@ -11,8 +11,8 @@ include("header.php");
             <div id="quiz_score_comment">대단해요!</div>
             <div id="quiz_score_button_wrapper">
                 <div id="quiz_score_button">
-                    <button id="back">돌아가기</button>
-                    <button id="resolve">다시하기</button>
+                    <button id="back"><a href="/">돌아가기</a></button>
+                    <button id="resolve"><a href="/">다시하기</a></button>
                 </div>
             </div>
         </div>
