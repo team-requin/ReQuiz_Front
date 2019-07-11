@@ -722,7 +722,7 @@ input {
     height: 30px;
     border-radius: 15px;
     width: calc(100% - 40%);
-    background-color: #ffffff;
+    background-color: #ffffff00;
 }
 #mypage_exp_percent {
     margin-top: 10px;
