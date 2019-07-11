@@ -130,7 +130,6 @@ input {
     transform: translate(-50%, -50%);
     z-index: 1002;
     color: #ffffff;
-    border-radius: 10px;
 }
 #login > div {
     width: 350px;
@@ -144,6 +143,7 @@ input {
     padding: 15px 0;
     text-align: center;
     font-size: 30px;
+    border-radius: 10px 10px 0 0;
     background-color: #187aca;
 }
 #login > div > input {
@@ -669,7 +669,6 @@ input {
 /*!user_mypage*/
 
 #mypage_wrapper {
-    height: 100%;
     background-image: url(/user/img/user_index_background.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -708,21 +707,21 @@ input {
     height: 30px;
     width: 333px;
     margin: 0 auto;
-    border-radius: 15px;
-    background-color: #ffffff;
+    border-radius: 5px;
 }
 #mypage_exp {
     position: relative;
     height: 30px;
-    border-radius: 15px;
-    background-color: #4b9faa;
+    border-radius: 5px;
+    background-color: #ffffff;
 }
 #mypage_exp > div {
     position: absolute;
     height: 30px;
-    border-radius: 15px;
-    width: calc(100% - 40%);
-    background-color: #ffffff;
+    border-radius: 5px;
+    min-width: 1%;
+    width: calc(100% - 99%);
+    background-color: #4b9faa;
 }
 #mypage_exp_percent {
     margin-top: 10px;
