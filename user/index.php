@@ -1,17 +1,18 @@
 <?php
 include('header.php');
 ?>
-<script src="/js/user_info.js"></script>
 <div id="mypage_wrapper">
     <div id="mypage_content_wrapper">
         <div id="mypage_main" class="mypage_content">
             <div id="mypage_profile_wrapper">
-                <p id="mypage_profile_hello">안녕하세요, xxx님!!</p>
+                <p id="mypage_profile_hello"></p>
                 <img id="mypage_profile_image" src="../img/color_requin.png" alt="mypage_background_img">
                 <div id="mypage_exp_wrapper">
-                    <div id="mypage_exp"><div></div></div>
+                    <div id="mypage_exp">
+						<div id="exp_bar"></div>
+					</div>
                 </div>
-                <div id="mypage_exp_percent">1,000</div>
+                <div id="mypage_exp_percent"></div>
             </div>
 
             <div id="mypage_input_wrapper">
@@ -22,8 +23,8 @@ include('header.php');
                     <p class="mypage_p">닉네임</p>
                     <button id="mypage_overlap_check">중복확인</button>
                 </div>
-                <input type="text" class="myapge_input">
-                <p class="mypage_p">비밀번호</p>
+                <input type="text" class="myapge_input" id="user_name">
+                <p class="mypage_p">비밀번호 변경</p>
                 <input type="password" class="myapge_input">
                 <p class="mypage_p">비밀번호 확인</p>
                 <input type="password" class="myapge_input">
@@ -37,6 +38,7 @@ include('header.php');
         </div>
     </div>
 </div>
+<script src="/js/user_info.js"></script>
 <?php
 include('footer.php');
 ?>
