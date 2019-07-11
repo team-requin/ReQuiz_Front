@@ -12,7 +12,8 @@ axios.post(server+'/auth/token-access', {}, header_token).then((data) => {
 }).catch((error) => {
 	console.log(error);
 	alert('로그인 세션이 만료되었습니다');
-	//sessionStorage.clear();
+	sessionStorage.clear();
+	location.href = '/';
 });
 function back_page() {
 	history.back();
