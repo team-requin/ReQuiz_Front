@@ -88,7 +88,7 @@ function signup_check_name() {
 		'name': name.value
 	};
 	
-	axios.post(server+'/auth/samename', data).then(() => {
+	axios.post(server+'/auth/check-same-name', data).then(() => {
 		alert('사용 가능한 닉네임입니다');
 	}).catch(() => {
 		alert('닉네임이 중복됩니다');
