@@ -1,7 +1,7 @@
 ﻿Object.defineProperty(console, '_commandLineAPI', { get : function() { throw '콘솔을 사용할 수 없습니다.' } });
 
-let server = 'http://api.teamrequin.kro.kr';
-//let server = "http://10.156.147.139";
+//let server = 'http://api.teamrequin.kro.kr';
+let server = "http://10.156.147.139";
 // let server = window.atoa('aHR0cDovLzEwLjE1Ni4xNDcuMTM5Ojgw');
 let filename = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('?');
 filename = filename[0];
@@ -45,6 +45,7 @@ function show_signup() {
     document.getElementById('signup_frame').style.display = 'block';
     document.getElementById('login_shadow').style.display = 'block';
 	document.getElementById('signup_name').focus();
+	sessionStorage.clear();
 }
 function hide_signup() {
     document.getElementById('signup_frame').style.display = 'none';
@@ -82,14 +83,20 @@ function logout() {
 	}
 }
 function signup_check_name() {
-	var name = document.getElementById('signup-name');
+	var name = document.getElementById('signup_name');
 	
+	if(name.value.replace(/ /i, '') == "") {
+		alert('닉네임을 입력해주세요');
+		name.focus();
+		return;
+	}
 	var data = {
 		'name': name.value
 	};
 	
 	axios.post(server+'/auth/check-same-name', data).then(() => {
 		alert('사용 가능한 닉네임입니다');
+		sessionStorage.setItem('name', true);
 	}).catch(() => {
 		alert('닉네임이 중복됩니다');
 		name.value = '';
@@ -99,12 +106,18 @@ function signup_check_name() {
 function signup_check_id() {
 	var id = document.getElementById('signup_id');
 	
+	if(id.value.replace(/ /i, '') == "") {
+		alert('아이디를 입력해주세요');
+		name.focus();
+		return;
+	}
 	var data = {
 		'id': id.value
 	};
 	
 	axios.post(server+'/auth/sameaccount', data).then(() => {
 		alert('사용 가능한 아이디입니다');
+		sessionStorage.setItem('id', true);
 	}).catch(() => {
 		alert('아이디가 중복됩니다');
 		id.value = '';
@@ -116,6 +129,18 @@ function signup() {
 	var id = document.getElementById('signup_id');
 	var pw = document.getElementById('signup_pw');
 	var pw_check = document.getElementById('signup_pw_check');
+	
+	if(sessionStorage.getItem('name') == null) {
+		alert('닉네임 중복체크를 해주세요');
+		name.focus();
+		return;
+	}
+	if(sessionStorage.getItem('id') == null) {
+		alert('아이디 중복체크를 해주세요');
+		id.focus();
+		return;
+	}
+	sessionStorage.clear();
 	
 	var data = {
 		'name': name.value,
