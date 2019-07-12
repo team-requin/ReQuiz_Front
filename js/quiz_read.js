@@ -1,4 +1,5 @@
 axios.post(server+'/service/search-question', {'uuid': getUrlPar('uuid')}).then((data) => {
+	sessionStorage.setItem('quiz_list', JSON.stringify(data.data));
 	var list = list = document.getElementById('quiz_read_wrapper');
 	var ul, li_q, li_a, i;
 	document.getElementById('quiz_read_title').appendChild(document.createTextNode(data.data.name));
@@ -25,6 +26,6 @@ axios.post(server+'/service/search-question', {'uuid': getUrlPar('uuid')}).then(
 });
 window.onload = () => {
 	document.getElementById('quiz_read_goto_solve').onclick = function() {
-		location.href = 'quiz_solve.php?uuid='+getUrlPar('uuid')+'&no=1';
+		location.href = 'quiz_solve.php';
 	};
 }

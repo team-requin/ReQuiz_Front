@@ -1,3 +1,4 @@
+let load = false;
 var btn, i, count = 0;
 var data = {
 	'search_id': getUrlPar('user')
@@ -27,8 +28,14 @@ axios.post(server+'/service/search-user', data).then((data) => {
 	console.log(error);
 	alert('존재하지 않는 유저입니다');
 	location.href = '/';
+}).finally(() => {
+	load = true;
 });
 function make_list(check) {
+	if(load) {
+		alert('해당 함수는 사용자가 직접 실행이 불가합니다');
+		return;
+	}
 	var list = document.getElementById('quiz_list');
 	for(i = 0; i < count; i++) {
 		var div = document.createElement('div');
@@ -61,5 +68,17 @@ function make_list(check) {
 		a.setAttribute('href', 'quiz_write.php');
 		btn.appendChild(a);
 		div.appendChild(btn);
+	}
+}
+window.onload = () => {
+	if(count == 0) {
+		var list = document.getElementById('quiz_list_frame');
+		var div = document.createElement('div');
+		var span = document.createElement('span');
+		
+		div.setAttribute('id', 'no_list');
+		list.appendChild(div);
+		span.appendChild(document.createTextNode('게시물이 존재하지 않습니다'));
+		div.appendChild(span);
 	}
 }
