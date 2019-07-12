@@ -11,14 +11,6 @@ axios.post(server+'/service/search-user', data).then((data) => {
 		axios.post(server+'/auth/token-access', {}, header_token).then((data) => {
 			if(getUrlPar('user') == data.data.user_id) {
 				var btn_place = document.getElementById('quiz_profile_input');
-				// var a = document.createElement('a');
-				// btn = document.createElement('button');
-				// btn_place.appendChild(btn);
-				// btn.setAttribute('id', 'btn_profile_edit');
-				// a.setAttribute('id', 'btn_profile_edit_a');
-				// a.setAttribute('href', '/user/index.php');
-				// a.appendChild(document.createTextNode('회원정보 수정'));
-				// btn.appendChild(a);
 				make_list(1);
 			} else {
 				make_list(0);
