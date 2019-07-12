@@ -1,7 +1,6 @@
 <?php
 include("header.php");
 ?>
-<script src="/js/quiz_read.js"></script>
 <div id="quiz_read_frame">
     <div id="quiz_read">
         <div id="quiz_read_wrapper">
@@ -19,7 +18,7 @@ include("header.php");
         </div>
     </div>
 </div>
-
+<script src="/js/quiz_read.js"></script>
 <?php
 include("footer.php");
 ?>

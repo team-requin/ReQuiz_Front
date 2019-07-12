@@ -10,6 +10,7 @@ axios.post(server+'/service/search-user', data).then((data) => {
 	document.getElementById('list_user_name').appendChild(document.createTextNode('Name: '+info.user.name));
 	if(sessionStorage.getItem('token') != null) {
 		axios.post(server+'/auth/token-access', {}, header_token).then((data) => {
+			load = false;
 			if(getUrlPar('user') == data.data.user_id) {
 				var btn_place = document.getElementById('quiz_profile_input');
 				make_list(1);
@@ -20,6 +21,8 @@ axios.post(server+'/service/search-user', data).then((data) => {
 			alert('로그인 세션이 만료되었습니다');
 			sessionStorage.clear();
 			location.reload();
+		}).finally(() => {
+			load = true;
 		});
 	} else {
 		make_list(0);
@@ -33,8 +36,7 @@ axios.post(server+'/service/search-user', data).then((data) => {
 });
 function make_list(check) {
 	if(load) {
-		alert('해당 함수는 사용자가 직접 실행이 불가합니다');
-		return;
+		throw '해당 함수는 사용자가 직접 실행이 불가합니다';
 	}
 	var list = document.getElementById('quiz_list');
 	for(i = 0; i < count; i++) {
@@ -70,15 +72,13 @@ function make_list(check) {
 		div.appendChild(btn);
 	}
 }
-window.onload = () => {
-	if(count == 0) {
-		var list = document.getElementById('quiz_list_frame');
-		var div = document.createElement('div');
-		var span = document.createElement('span');
-		
-		div.setAttribute('id', 'no_list');
-		list.appendChild(div);
-		span.appendChild(document.createTextNode('게시물이 존재하지 않습니다'));
-		div.appendChild(span);
-	}
+if(count == 0) {
+	var list = document.getElementById('quiz_list_frame');
+	var div = document.createElement('div');
+	var span = document.createElement('span');
+	
+	div.setAttribute('id', 'no_list');
+	list.appendChild(div);
+	span.appendChild(document.createTextNode('게시물이 존재하지 않습니다'));
+	div.appendChild(span);
 }

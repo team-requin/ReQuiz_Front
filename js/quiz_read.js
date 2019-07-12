@@ -24,8 +24,7 @@ axios.post(server+'/service/search-question', {'uuid': getUrlPar('uuid')}).then(
 	alert('존재하지 않는 문제입니다');
 	location.href = '/';
 });
-window.onload = () => {
-	document.getElementById('quiz_read_goto_solve').onclick = function() {
-		location.href = 'quiz_solve.php';
-	};
-}
+
+document.getElementById('quiz_read_goto_solve').onclick = function() {
+	location.href = 'quiz_solve.php';
+};
