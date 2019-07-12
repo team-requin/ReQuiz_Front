@@ -6,7 +6,7 @@ include("header.php");
     <div id="quiz_read">
         <div id="quiz_read_wrapper">
             <div id="quiz_read_title_wrapper">
-                <p id="quiz_read_title">문제집 제목</p>
+                <p id="quiz_read_title"></p>
             </div>
             <!-- <ul class="quiz_read_ul">
                 <li class="quiz_read_question">Requin은 무엇일까요?</li>
@@ -15,7 +15,7 @@ include("header.php");
         </div>
         <button id="quiz_more_button" onclick="clickMoreList()"><img src="/img/dotdotdot_white.png" alt="dotdotdot_img"></button>
         <div id="quiz_read_goto_solve_frame">
-            <button id="quiz_read_goto_solve"><a href="quiz_solve.php">문제 풀러가기</a></button>
+            <button id="quiz_read_goto_solve">문제 풀러가기</button>
         </div>
     </div>
 </div>
