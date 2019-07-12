@@ -293,20 +293,6 @@ input {
     text-align: left;
     border-bottom: 1px solid #968383;
 }
-#btn_profile_edit {
-    width: 220px;
-    height: 30px;
-    background-color: #596ac9;
-    color: #ffffff;
-}
-#btn_profile_edit_a {
-    display: block;
-    width: 220px;
-    height: 30px;
-    line-height: 30px;
-    color: #ffffff;
-    text-decoration: none;
-}
 #quiz_list {
     position: relative;
     padding-top: 100px;
