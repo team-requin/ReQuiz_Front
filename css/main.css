@@ -300,10 +300,9 @@ input {
     margin: 0 auto;
 }
 #no_list {
-    position: absolute;
-    right: 430px;
-    top: 200px;
+    margin-top: 50px;
     font-size: 30px;
+    text-align: center;
     text-shadow: 0 5px 10px #000000;
 }
 .quiz_list_frame {

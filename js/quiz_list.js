@@ -72,7 +72,7 @@ function make_list(check) {
 }
 window.onload = () => {
 	if(count == 0) {
-		var list = document.getElementById('quiz_list_frame');
+		var list = document.getElementById('quiz_list');
 		var div = document.createElement('div');
 		var span = document.createElement('span');
 		
