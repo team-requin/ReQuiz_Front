@@ -20,6 +20,6 @@ axios.post(server+'/auth/token-access', {}, header_token).then((data) => {
 	sessionStorage.clear();
 	location.href = '/';
 });
-function back_page() {
-	history.back();
+document.getElementById('mypage_btn').onclick = function() {
+	alert('수정 완료');
 }

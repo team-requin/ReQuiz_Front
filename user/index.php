@@ -33,7 +33,7 @@ include('header.php');
 
         <div id="mypage_bottom_wrapper" class="mypage_content">
             <div id="mypage_bottom">
-                <button id="mypage_btn" onclick="back_page()">수정완료</button>
+                <button id="mypage_btn">수정완료</button>
             </div>
         </div>
     </div>
