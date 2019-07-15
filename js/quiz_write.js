@@ -13,10 +13,12 @@ function plus_quiz_write() {
     var input_answer = document.createElement('input');
     var button = document.createElement('button');
 
+	input_question.setAttribute('id', 'question_'+quiz_write_count);
     input_question.setAttribute('type', 'text');
     input_question.setAttribute('class', 'quiz_question quiz_problems');
     input_question.setAttribute('placeholder', 'Please enter a question');
     
+	input_answer.setAttribute('id', 'answer_'+quiz_write_count);
     input_answer.setAttribute('type', 'text');
     input_answer.setAttribute('class', 'quiz_answer quiz_problems');
     input_answer.setAttribute('placeholder', 'Please enter a answer');
@@ -54,3 +56,20 @@ elem.parentNode.removeChild(elem);
 var header = document.querySelector("h1");	//제거하고자 하는 엘리먼트
 header.parentNode.removeChild(header);
 */
+document.getElementById('quiz_create_button').onclick = function() {
+	var title = document.getElementById('quiz_write_title_text');
+	if(title.value.replace(/ /i, '') == '') {
+		alert('만들 단어장의 제목을 입력하세요');
+		title.focus();
+		return;
+	}
+	var data = {
+		'quest_name ': title.value
+	};
+	axios.post(server+'/service/create-list', data, header_token).then((data) => {
+		alert('단어장 만들기 일단은 성공');
+		console.log(data);
+	}).catch(() => {
+		alert('단어장 제작중 서버에 문제가 생겼습니다\n대단히 죄송합니다..');
+	})
+}

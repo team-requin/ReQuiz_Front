@@ -3,15 +3,21 @@
 let server = 'http://api.teamrequin.kro.kr';
 //let server = "http://10.156.147.139";
 // let server = window.atoa('aHR0cDovLzEwLjE1Ni4xNDcuMTM5Ojgw');
-let filename = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('?');
-filename = filename[0];
-let info;
+let filename = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('?')[0];
 let header_token = {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}};
 window.onload = () => {
 	var btn_list = document.getElementById('header_btns_list');
-	var btn = document.createElement('button');
+	var btn;
 	var a = document.createElement('a');
 	if(sessionStorage.getItem('token') != null) { //로그인 중
+		var token = header_token.headers.Authorization.split(' ')[1];
+		var user_id = JSON.parse(atob(token.split('.')[1])).identity;
+		btn = document.createElement('button');
+		btn_list.appendChild(btn);
+		btn.setAttribute('class', 'btn');
+		btn.setAttribute('onclick', 'location.href = "/quiz/quiz_list.php?user='+user_id+'"');
+		btn.appendChild(document.createTextNode('단어장'));
+		btn = document.createElement('button');
 		btn_list.appendChild(btn);
 		btn.setAttribute('id', 'btn_mypage');
 		btn.setAttribute('class', 'btn');
@@ -24,6 +30,7 @@ window.onload = () => {
 		btn.setAttribute('onclick', 'logout()');
 		btn.appendChild(document.createTextNode('로그아웃'));
 	} else { //로그아웃 중
+		btn = document.createElement('button');
 		btn_list.appendChild(btn);
 		btn.setAttribute('id', 'btn_login');
 		btn.setAttribute('class', 'btn');
