@@ -18,24 +18,30 @@ function changeItem(index, key, value) {
     store.list[index][key] = value;
 }
 
-const listElement = document.querySelector("#quiz_write_frame");
-function renderList() {
-    const wrappedList = store.list.map(
-        (item, index) =>
-            `
-            <div class="quiz_write">
-                <div class="quiz_num">${index + 1}</div>
-                <div class="quiz_problem">
-                    <form>
-                        <input class="quiz_question quiz_problems" placeholder="question" onchange="changeItem(${index}, 'question', this.value)" value="${item.question}"/>
-                        <input class="quiz_answer quiz_problems" placeholder="answer" onchange="changeItem(${index}, 'answer', this.value)" value="${item.answer}"/>
-                    </form>
-                </div>
-                <button class="quiz_problem_delete" onclick="deleteItem(${index})">삭제</button>
-            </div>
-            `
-    );
-    listElement.innerHTML = wrappedList;
+    input_question.setAttribute('type', 'text');
+    input_question.setAttribute('class', 'quiz_question quiz_problems');
+    input_question.setAttribute('placeholder', 'Please enter a question');
+    
+    input_answer.setAttribute('type', 'text');
+    input_answer.setAttribute('class', 'quiz_answer quiz_problems');
+    input_answer.setAttribute('placeholder', 'Please enter a answer');
+
+    quiz_write.setAttribute('class', 'quiz_write')
+    quiz_num.setAttribute('class', 'quiz_num');
+    p.appendChild(document.createTextNode(quiz_write_count+1));
+    quiz_num.appendChild(p);
+
+    quiz_problem.setAttribute('class', 'quiz_problem');
+    button.setAttribute('class', 'quiz_problem_delete');
+    button.appendChild(document.createTextNode('삭제하기'));
+
+    form.appendChild(input_question);
+    form.appendChild(input_answer);
+    quiz_problem.appendChild(form);
+    quiz_problem.appendChild(button);
+    quiz_write.appendChild(quiz_num);
+    quiz_write.appendChild(quiz_problem);
+    quiz_write_frame.appendChild(quiz_write);
 }
 
 document.getElementsByClassName('quiz_make_btn')[0].onclick = function() {
@@ -44,3 +50,12 @@ document.getElementsByClassName('quiz_make_btn')[0].onclick = function() {
     
     // history.back();
 }
+/* function removeDummy() {
+var elem = document.getElementById('dummy');
+elem.parentNode.removeChild(elem);
+}
+*/
+/*
+var header = document.querySelector("h1");	//제거하고자 하는 엘리먼트
+header.parentNode.removeChild(header);
+*/
