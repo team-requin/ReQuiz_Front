@@ -1,14 +1,9 @@
 * {
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
     font-family: 'HSGaeulsenggak';
 }
-@font-face { font-family: 'S-CoreDream-1Thin'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff'); font-weight: normal; font-style: normal; }
 @font-face { font-family: 'HSGaeulsenggak'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/HSGaeulsenggak.woff') format('woff'); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'stencil'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/stencil.woff') format('woff'); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'NanumBarunpen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumBarunpen.woff') format('woff'); font-weight: normal; font-style: normal; }
-@font-face { font-family: 'Binggrae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae.woff') format('woff'); font-weight: normal; font-style: normal; }
 
 body {
     min-width: 900px;
@@ -77,7 +72,7 @@ input {
 /*!main*/
 
 #main {
-    height: 500px;
+    min-height: 600px;
     padding-top: 100px;
     background-image: url(../img/index_background_img.png);
     background-repeat: no-repeat;
@@ -86,7 +81,6 @@ input {
 .main_wrapper {
     width: 400px;
     margin: 0 auto;
-    /* height: 100%; */
 }
 #title {
     text-shadow: -2px 2px 5px #000000;
@@ -284,25 +278,25 @@ input {
 }
 #quiz_profile_input > p {
     display: block;
-    margin: 20px auto;
     width: 200px;
     height: 40px;
     line-height: 40px;
-    font-size: 15px;
+    margin: 20px auto;
     padding: 0 10px;
+    font-size: 15px;
     text-align: left;
     border-bottom: 1px solid #968383;
 }
 #quiz_list {
     position: relative;
-    padding-top: 100px;
-    width: 55%;
+    width: 593px;
     margin: 0 auto;
+    padding-top: 100px;
 }
 #no_list {
-    margin: 100px 0 0 100px;
+    text-align: center;
     font-size: 30px;
-    text-shadow: 0 5px 10px #000000;
+    margin: 100px 0;
 }
 .quiz_list_frame {
     position: relative;
@@ -337,30 +331,23 @@ input {
 }
 /*todo : <button class="quiz_add_button">문제 만들기</button>*/
 #quiz_add_button {
-    display: block;
     height: 50px;
     width: 50px;
-    font-size: 15px;
-    font-weight: bold;
     border-radius: 50%;
     background-color: #febc01;
 }
 #quiz_add_text {
-    display: block;
     width: 50px;
-    height: 50px;
+    line-height: 60px;
     margin: 0 auto;
-    line-height: 50px;
-    color: #ffffff;
     font-size: 25px;
+    font-weight: bold;
     text-decoration: none;
+    color: #ffffff;
 }
 
 /*!quiz_write*/
 
-/* #quiz_write_container {
-    height: 100%;
-} */
 #quiz_write_frame {
     background-color: #ade9e7;
     text-align: center;
@@ -373,12 +360,13 @@ input {
     margin: 20px auto 0;
     border-radius: 10px;
 }
-.quiz_write_title {
-    display: block;
+#quiz_write_title {
+    width: 500px;
     height: 50px;
     line-height: 50px;
+    margin: 50px auto 0;
 }
-.quiz_write_title_input {
+#quiz_write_title_input {
     width: 500px;
     height: 45px;
     padding: 5px 15px;

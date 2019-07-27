@@ -6,6 +6,9 @@ let server = 'http://api.teamrequin.kro.kr';
 let filename = document.URL.substring(document.URL.lastIndexOf("/") + 1, document.URL.length).split('?');
 filename = filename[0];
 let info;
+
+
+
 let header_token = {'headers': {'Authorization': "Bearer "+sessionStorage.getItem('token')}};
 window.onload = () => {
 	var btn_list = document.getElementById('header_btns_list');
@@ -62,7 +65,7 @@ function login(event) {
 	var userdata = {
         'id': id.value,
         'pw': md5(pw.value)
-    };
+	};
     axios.post(server+'/auth/login', userdata).then((user) => {
 		alert('로그인 되었습니다');
 		sessionStorage.setItem('token', user.data.access_token);
